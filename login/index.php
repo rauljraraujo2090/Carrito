@@ -33,17 +33,17 @@
                                     <div class="p-5">
                                         <div class="text-center mb-5">
                                             <a href="index.html" class="text-dark font-size-22 font-family-secondary">
-                                                <i class="mdi mdi-alpha-x-circle"></i> <b>XACTON</b>
+                                                <i class="mdi mdi-alpha-x-circle"></i> <b>Ingresa</b>
                                             </a>h
                                         </div>
                                         <h1 class="h5 mb-1">Bienvenido</h1>
                                         <p class="text-muted mb-4">Ingrese su dirección de correo electrónico y contraseña para acceder al panel de administración.</p>
                                         <form class="user">
                                             <div class="form-group">
-                                                <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+                                                <input type="email"  name="usuario"class="form-control form-control-user" id="exampleInputEmail" placeholder="Ingrese su correo">
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                                <input type="password"  name="usuario" class="form-control form-control-user" id="exampleInputPassword" placeholder="Ingrese su contraseña">
                                             </div>
                                             <a href="" class="btn btn-success btn-block waves-effect waves-light">Ingresar</a>
 

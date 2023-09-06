@@ -1425,7 +1425,7 @@ div.dt-button-info h2 {
 
 /* 19. Auth*/
 .bg-login {
-  background: url("../images/bg-login.jpg");
+  background: url("../images/login.png");
   background-position: center;
   background-size: cover;
 }
