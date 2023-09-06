@@ -16,6 +16,7 @@
     <link href="../plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../plantilla/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="../plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="../plantilla/Admin/vertical/assets/css/theme.css" rel="stylesheet" type="text/css" />
 
 </head>
 
