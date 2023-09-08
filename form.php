@@ -53,6 +53,22 @@
 <div class="vertical-menu">
 <div  data-simplebar class="h-100">
 <div class="navbar-brand-box">
+    <a class="logo"href="">
+        <img src="neymar.png" width="100" height="100"alt="">
+
+
+    </a>
+
+
+</div>
+
+<div id="sidebar-menu">
+    <ul class="metismenu list-unstyled" id="side-menu">
+        <li class="menu-title">Menu
+
+        </li>
+    </ul>
+
 
 
 </div>
