@@ -49,8 +49,8 @@
                                             <a href="" class="btn btn-success btn-block waves-effect waves-light">Ingresar</a>
 
                                             <div class="text-center mt-4">
-                                                <h5 class="text-muted font-size-16">Iniciar Sesion usando</h5>
-                                            
+                                                <h5 class="text-muted font-size-16"></h5>
+                                            <!----
                                                 <ul class="list-inline mt-3 mb-0">
                                                     <li class="list-inline-item">
                                                         <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
@@ -65,6 +65,7 @@
                                                         <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github-circle"></i></a>
                                                     </li>
                                                 </ul>
+                                                ---->
                                             </div>
                                             
                                         </form>
