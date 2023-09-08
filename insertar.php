@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Xacton - Admin & Dashboard Template</title>
+    <title>Insertar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="MyraStudio" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="plantilla/Admin/vertical/assets/images/favicon.ico">
 
     <!-- App css -->
     <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -368,7 +368,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center justify-content-between">
-                                <h4 class="mb-0 font-size-18">Form Elements</h4>
+                                <h4 class="mb-0 font-size-18">Formulario </h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
