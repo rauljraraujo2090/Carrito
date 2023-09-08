@@ -54,7 +54,7 @@
 <div  data-simplebar class="h-100">
 <div class="navbar-brand-box">
     <a class="logo"href="">
-        <img src="neymar.png" width="100" height="100"alt="">
+        <img src="neymar.png" width="100" height="100"alt="imagen">
 
 
     </a>
@@ -65,6 +65,54 @@
 <div id="sidebar-menu">
     <ul class="metismenu list-unstyled" id="side-menu">
         <li class="menu-title">Menu
+            <li>
+            <a  class="waves-effect"href=""><i class="feather-home"></i>Inicio</a>
+            </li>
+
+
+
+            <li>
+            <a  class="waves-effect"href=""><i class="feather-gift"></i>Productos</a>
+            </li>
+
+
+
+
+
+            <li>
+            <a  class="waves-effect"href=""><i class="dripicons-user"></i>Usuario</a>
+            </li>
+
+
+            <li>
+            <a  class="waves-effect"href=""><i class="dripicons-wallet"></i>Pedidos</a>
+            </li>
+
+
+
+
+            <li>
+            <a  class="waves-effect"href=""><i class="dripicons-user-group"></i>Clientes</a>
+            </li>
+
+
+            <li>
+            <a  class="waves-effect"href=""><i class="dripicons-document-new"></i>Reportes</a>
+            </li>
+
+
+
+            <li>
+            <a  class="waves-effect"href=""><i class="mdi mdi-account-multiple-plus-outline"></i>Proveedores</a>
+            </li>
+
+
+
+            <li>
+            <a  class="waves-effect"href=""><i class="mdi mdi-folder-search-outline"></i>Mantenimiento</a>
+            </li>
+
+
 
         </li>
     </ul>
