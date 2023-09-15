@@ -118,11 +118,11 @@
 
             
 
-            <li>
+                            <li>
                             <a href="javascript: void(0);" class="has-arrow waves-effect"><i
                                     class="feather-list ext-white"></i><span class="text-white">Mantenimiento</span></a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tables-basic.html">Sistema</a></li>
+                                <li><a href="tables-basic.html"><i class="feather-tv"></i>Sistema</a></li>
                                 <li><a href="tables-datatables.html">Clientes</a></li>
                                 <li><a href="tables-datatables.html">Base de Datos</a></li>
                             </ul>
