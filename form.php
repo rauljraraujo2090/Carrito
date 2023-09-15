@@ -15,6 +15,31 @@
     <?php
     require('include/header.php');
     ?>
+     
+     <!---INICIO DE CONTENIDO--->
+<div class="main-content">
+
+
+   <div class="page-content">
+       <div class="container-fluid">
+            <div class="row">
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+     <!---FIN DE CONTENIDO-->
     <!-- jQuery  -->
     <script src="plantilla/Admin/vertical/assets/js/jquery.min.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/bootstrap.bundle.min.js"></script>
