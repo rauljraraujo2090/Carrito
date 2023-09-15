@@ -16,7 +16,13 @@
     <header id="page-topbar">
         
         <div class="navbar-header">
-            <div class="d-flex align-items-left"></div>
+            <div class="d-flex align-items-left">
+
+            <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            </div>
             <div class="d-flex align-items-center">
                 <div class="dropdown d-inline-block ml-2">
                     <button type="button" class="btn header-item waves-effect " id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -116,9 +122,9 @@
                             <a href="javascript: void(0);" class="has-arrow waves-effect"><i
                                     class="feather-list ext-white"></i><span class="text-white">Mantenimiento</span></a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tables-basic.html">Basic Tables</a></li>
-                                <li><a href="tables-datatables.html">Data Tables</a></li>
-                                <li><a href="tables-datatables.html">Data Tables</a></li>
+                                <li><a href="tables-basic.html">Sistema</a></li>
+                                <li><a href="tables-datatables.html">Clientes</a></li>
+                                <li><a href="tables-datatables.html">Base de Datos</a></li>
                             </ul>
                         </li>
 

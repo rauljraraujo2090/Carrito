@@ -23,11 +23,80 @@
    <div class="page-content">
        <div class="container-fluid">
             <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+
+                        <form action="" method="post">
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
+                                <input type="number"min="1" max="8"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni"placeholder="Ingrese su Dni ">
+
+                            </div>
+
+
+
+                            <div class="form-group row">
+                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Apellidos y Nombres</label>
+                            <input type="text"min="1" max="8"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  ">
+
+                            </div>
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Correo:</label>
+                                <input type="email"min="1" max="8"class="form-control col-lg-10 col-md-10 col-sm-12"  name="dni"placeholder="Ingrese su Correo">
+
+                            </div>
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Telefono :</label>
+                                <input type="number"min="1" max="8"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni"placeholder="Ingrese su Telefono ">
+
+                            </div>
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion:</label>
+                                <input type="number"min="1" max="8"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="dni"placeholder="Ingrese su Direccion">
+
+                            </div>
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
+                                <input type="date"min="1" max="8"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni"placeholder="Ingrese su Fecha de Nacimiento ">
+
+                            </div>
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Contraseña</label>
+                                <input type="password"min="1" max="8"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni"placeholder="Ingrese su Contraseña ">
+
+                            </div>
+
+
+
+                      
+                      
+
+
+                        </form>
+                        </div>
+                        
+                    </div>
+                </div>
 
             </div>
 
 
         </div>
+
     </div>
 
 
