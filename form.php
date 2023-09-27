@@ -24,6 +24,85 @@
        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                    <div class="col-10">
+                    <h4>Registrar Usuarios</h4>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+
+                        <form action="operaciones/registrar_usuarios.php" method="post">
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
+
+                            </div>
+
+
+
+                            <div class="form-group row">
+                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Apellidos y Nombres</label>
+                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  "required>
+
+                            </div>
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Correo:</label>
+                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
+
+                            </div>
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Telefono :</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
+
+                            </div>
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion:</label>
+                                <input type="number"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese su Direccion"required>
+
+                            </div>
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
+                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
+
+                            </div>
+
+
+                    
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
+                                <button type="submit" class="btn btn-primary ">Registrar</button>
+
+                            </div>
+
+                      
+                      
+
+
+                        </form>
+                        </div>
+                        
+                    </div>
+
+
+
+
+
+
+
+
+
+
                     <div class="card">
                         <div class="card-body">
 
@@ -86,6 +165,20 @@
                         </div>
                         
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
 
             </div>
