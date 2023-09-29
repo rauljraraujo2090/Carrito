@@ -11,6 +11,13 @@ $insertar = "INSERT INTO usuarios (dni,apellidos_nombres,correo,telefono,direcci
 
 $query = mysqli_query($conn, $insertar);
 
+
+
+if($query){
+    Header("Location: form.php");
+}else{
+
+}
 /*
 echo $dni."<br>";
 echo $apellidos."<br>";
