@@ -1,8 +1,4 @@
-<?php
-    require('conexion.php');
-    $id_raul=$_GET["id"];
-    $usuarios="SELCET]*FROM usuarios WHERE id='$id_raul'"
-    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
