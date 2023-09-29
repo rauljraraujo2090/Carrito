@@ -72,85 +72,43 @@
 
 <div id="sidebar-menu">
     <ul class="metismenu list-unstyled" id="side-menu">
-        <li class="menu-title">Menu
-            <li>
-            <a  class="waves-effect"href=""><i class="feather-home"></i>Inicio</a>
-            </li>
-
-
-
-            <li>
-            <a  class="waves-effect"href=""><i class="feather-gift"></i>Productos</a>
-            </li>
-
-
-
-
-
-            <li>
-            <a  class="waves-effect"href=""><i class="dripicons-user"></i>Usuario</a>
-            </li>
-
-
-            <li>
-            <a  class="waves-effect"href=""><i class="dripicons-wallet"></i>Pedidos</a>
-            </li>
-
-
-
-
-            <li>
-            <a  class="waves-effect"href=""><i class="dripicons-user-group"></i>Clientes</a>
-            </li>
-
-
-            <li>
-            <a  class="waves-effect"href=""><i class="dripicons-document-new"></i>Reportes</a>
-            </li>
-
-
-
-            <li>
-            <a  class="waves-effect"href=""><i class="mdi mdi-account-multiple-plus-outline"></i>Proveedores</a>
-            </li>
-
-
-
-            
-
-                            <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect"><i
-                                    class="feather-list ext-white"></i><span class="text-white">Mantenimiento</span></a>
+    <li class="menu-title">MENU</li>
+                    <li>
+                        <a href="" class="waves-effect"><i class="feather-home"></i>Inicio</a>
+                    </li>
+                    <li>
+                        <a href="ventas.php" class="waves-effect"><i class="feather-shopping-bag"></i>Ventas</a>
+                    </li>
+                    <li>
+                        <a href="productos.php" class="waves-effect"><i class="feather-shopping-bag"></i>Productos</a>
+                    </li>
+                    <li>
+                        <a href="form.php" class="waves-effect"><i class="feather-users"></i>Usuarios</a>
+                    </li>
+                    <li>
+                        <a href="pedidos.php" class="waves-effect"><i class="feather-truck"></i>Pedidos</a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect"><i class="dripicons-gear"></i>Devoluciones</a>
+                    </li>
+                    <li>
+                        <a href="clientes.php" class="waves-effect"><i class="feather-user-plus"></i>Clientes</a>
+                    </li>
+                    <li>
+                        <a href="" class="waves-effect"><i class="dripicons-graph-line"></i>Reportes</a>
+                    </li>
+                    <li>
+                        <a href="proveedor.php" class="waves-effect"><i class="fas fa-users"></i>Proveedores</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                    class="dripicons-gear ext-white"></i><span class="text-white">Mantenimiento</span></a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tables-basic.html"><i class="feather-tv"></i>Sistema</a></li>
+                                <li><a href="tables-basic.html">Sistema</a></li>
                                 <li><a href="tables-datatables.html">Clientes</a></li>
                                 <li><a href="tables-datatables.html">Base de Datos</a></li>
                             </ul>
-                        </li>
-
-
-
-
-            <li>
-            <a  class="waves-effect"href=""><i class="feather-gift"></i>Devoluciones</a>
-            
-
-            
-            </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </li>
+                    </li>
     </ul>
 
 

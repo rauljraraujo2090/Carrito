@@ -1,30 +1,32 @@
 <?php
-include('conexion.php');
+include("conexion.php");
+//recibir la informacion
+
 $dni=$_POST['dni'];
-$apellidos_nombres=$_POST['a_n'];
+$ape_nom=$_POST['a_n'];
 $correo=$_POST['correo'];
 $telefono=$_POST['telefono'];
 $direccion=$_POST['direccion'];
-$f_nacimiento=$_POST['nacimiento'];
-$insertar = "INSERT INTO usuarios (dni,apellidos_nombres,correo,telefono,direccion,fecha_nacimiento,password,activo,reset_password,token_password)VALUES ('$dni','$apellidos_nombres',
-'$correo','$telefono','$direccion',$f_nacimiento,'','','','') ";
+$fecha_naci=$_POST['nacimiento'];
 
-$query = mysqli_query($conn, $insertar);
-
-
-
-if($query){
-    Header("Location: form.php");
-}else{
-
-}
+//mostrar la informacion
 
 echo $dni."<br>";
-echo $apellidos_nombres."<br>";
+echo $ape_nom."<br>";
 echo $correo."<br>";
 echo $telefono."<br>";
-
 echo $direccion."<br>";
-echo $f_nacimiento."<br>";
+echo $fecha_naci."<br>";
+
+$consulta="INSERT INTO usuario(dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password, activo, reset_password, token_password)
+VALUES ('$dni', '$ape_nom', '$correo', '$telefono', '$direccion', '$fecha_naci', '$dni',1,0,'')";
+
+$ejecutar= mysqli_query($conn, $consulta);
+
+if ($ejecutar) {
+    echo "Registro Exitoso";
+}else {
+    echo "Registro Fallido";
+}
 
 ?>

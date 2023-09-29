@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
+    <title>Pedidos</title>
     <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-10">
-                    <h4>Registrar Usuarios</h4>
+                    <h4>Registrar Pedidos</h4>
                     </div>
                     <div class="card">
                         <div class="card-body">
