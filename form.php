@@ -1,4 +1,7 @@
-
+<?php
+    require('conexion.php');
+    
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +35,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                        <form action="operaciones/registrar_usuarios.php" method="post">
+                        <form action="registrar_usuarios.php" method="post">
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
                                 <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
@@ -217,7 +220,7 @@
       <td><?=$raul->fecha_nacimiento ?></td>
     <td>
     
-        <a href="actualizar.php?id_raul=<?php $raul['id'];?>" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
+        <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
         <a href="eliminar_usuarios.php" type="button" class="btn btn-danger"><i class="fa-solid- fa-pen-to-square">Eliminar</i></a>
        
       </td>

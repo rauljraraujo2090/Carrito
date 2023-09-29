@@ -1,5 +1,5 @@
 <?php
-include('../conexion.php');
+include('conexion.php');
 $dni=$_POST['dni'];
 $apellidos_nombres=$_POST['a_n'];
 $correo=$_POST['correo'];
