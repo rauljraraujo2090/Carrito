@@ -2,7 +2,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "carrito_ventas";
 
 // Crea una conexión

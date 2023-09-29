@@ -77,7 +77,7 @@
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
 
                             </div>
 
