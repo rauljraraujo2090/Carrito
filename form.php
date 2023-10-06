@@ -148,7 +148,7 @@
           
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">telefono</label>
-            <input type="text"  name="telefono"class="form-control" value=""id="exampleInputPassword1">
+            <input type="number"  name="telefono"class="form-control" value=""id="exampleInputPassword1">
           </div>
 
           <div class="mb-3">
@@ -189,7 +189,7 @@
                         <br>
                         <br>
                         <br>
-                        <table class="table" id="userstable">
+                        <table class="table border" id="userstable">
   <thead>
     <tr>
       <th scope="col">id</th>
