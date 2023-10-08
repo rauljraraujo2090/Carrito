@@ -82,6 +82,15 @@
                     <li>
                         <a href="productos.php" class="waves-effect"><i class="feather-shopping-bag"></i>Productos</a>
                     </li>
+
+
+                    <li>
+                        <a href="categorias.php" class="waves-effect"><i class="feather-shopping-bag"></i>Categoria</a>
+                    </li>
+
+
+
+
                     <li>
                         <a href="form.php" class="waves-effect"><i class="feather-users"></i>Usuarios</a>
                     </li>
@@ -94,12 +103,38 @@
                     <li>
                         <a href="clientes.php" class="waves-effect"><i class="feather-user-plus"></i>Clientes</a>
                     </li>
+
+
+                    
                     <li>
-                        <a href="" class="waves-effect"><i class="dripicons-graph-line"></i>Reportes</a>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect"><i
+                                    class="dripicons-gear ext-white"></i><span class="text-white">Empresa</span></a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="detalles_empresa.php">Datos de la Empresa </a></li>
+                                <li><a href="detalle_pedido.php">Detalles  del Pedido</a></li>
+                                <li><a href="detalle_venta.php">Detalles de la venta</a></li>
+                            </ul>
+                    </li>
+
+
+
+
+
+                    <li>
+                        <a href="reportes.php" class="waves-effect"><i class="dripicons-graph-line"></i>Reportes</a>
                     </li>
                     <li>
                         <a href="proveedor.php" class="waves-effect"><i class="fas fa-users"></i>Proveedores</a>
                     </li>
+
+
+                    <li>
+                        <a href="sistema.php" class="waves-effect"><i class="fas fa-users"></i>Sistema</a>
+                    </li>
+
+
+
+
                     <li>
                         <a href="javascript: void(0);" class="has-arrow waves-effect"><i
                                     class="dripicons-gear ext-white"></i><span class="text-white">Mantenimiento</span></a>

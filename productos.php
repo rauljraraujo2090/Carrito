@@ -36,29 +36,24 @@
                         <div class="card-body">
 
                         <form action="registrar_usuarios.php" method="post">
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
-
-                            </div>
-
+                          
 
 
                             <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Apellidos y Nombres</label>
+                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Descripcion</label>
                             <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  "required>
 
                             </div>
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Correo:</label>
-                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Detalle</label>
+                                <input type="text"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
 
                             </div>
 
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Telefono :</label>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Precio Venta</label>
                                 <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
 
                             </div>
@@ -67,19 +62,32 @@
 
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion:</label>
-                                <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese su Direccion"required>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Stock</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
 
                             </div>
+
 
 
 
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Estado</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
 
                             </div>
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Imagen</label>
+                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
+
+                            </div>
+
+
+
+
+
 
 
                     

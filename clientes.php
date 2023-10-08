@@ -36,30 +36,22 @@
                         <div class="card-body">
 
                         <form action="registrar_usuarios.php" method="post">
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
-
-                            </div>
-
-
-
-                            <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Apellidos y Nombres</label>
-                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  "required>
+                        <div class="form-group row">
+                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Razon Social</label>
+                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese  nombre  "required>
 
                             </div>
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Correo:</label>
-                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
+                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese el Correo"required>
 
                             </div>
 
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Telefono :</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese el Telefono "required>
 
                             </div>
 
@@ -68,16 +60,15 @@
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion:</label>
-                                <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese su Direccion"required>
+                                <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese la Direccion"required>
 
                             </div>
 
 
 
-
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion de Envio</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese el Direccion de envio "required>
 
                             </div>
 

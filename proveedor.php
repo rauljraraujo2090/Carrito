@@ -36,30 +36,26 @@
                         <div class="card-body">
 
                         <form action="registrar_usuarios.php" method="post">
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
-
-                            </div>
+                            
 
 
 
                             <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Apellidos y Nombres</label>
-                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  "required>
+                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Razon Social</label>
+                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese  nombre  "required>
 
                             </div>
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Correo:</label>
-                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
+                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese el Correo"required>
 
                             </div>
 
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Telefono :</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese el Telefono "required>
 
                             </div>
 
@@ -68,7 +64,7 @@
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion:</label>
-                                <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese su Direccion"required>
+                                <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese la Direccion"required>
 
                             </div>
 
@@ -76,8 +72,8 @@
 
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Metodo de Pago</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Metodo de Pago "required>
 
                             </div>
 
@@ -186,56 +182,6 @@
 
 
                         
-                        <br>
-                        <br>
-                        <br>
-                        <table class="table" id="userstable">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Dni</th>
-      <th scope="col">Apellidos_Nombres</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Nacimiento</th>
-      <th scope="col">Accion</th>
-    </tr>
-  
-
-  </thead>
-  <tbody>
-
-
-    <?php
-    $sql=$conn->query("Select*from usuario");
-    while($raul=$sql->fetch_object()){?>
-<tr>
-      <th scope="row"><?=$raul->id ?></th>
-      <td><?=$raul->dni ?></td>
-      <td><?=$raul->apellidos_nombres ?></td>
-      <td><?=$raul->correo ?></td>
-      <td><?=$raul->telefono ?></td>
-      <td><?=$raul->direccion ?></td>
-      <td><?=$raul->fecha_nacimiento ?></td>
-    <td>
-    
-        <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
-        <a href="eliminar_usuarios.php" type="button" class="btn btn-danger"><i class="fa-solid- fa-pen-to-square">Eliminar</i></a>
-       
-      </td>
-    </tr>
-
-
-   <?php }
-
-
-
-    ?>
-
-   
-  </tbody>
-</table>
 <!-- table -->
                         </div>
                         

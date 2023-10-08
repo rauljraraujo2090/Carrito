@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos</title>
+    <title>Carrito</title>
     <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
@@ -30,48 +30,29 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-10">
-                    <h4>Registrar Pedidos</h4>
+                    <h4>Registrar Categorias</h4>
                     </div>
-                    <div class="card">
+                    <div class="card ">
                         <div class="card-body">
 
                         <form action="registrar_usuarios.php" method="post">
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Entrega</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-
-
-                              <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Metodo de Pago</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="" required >
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Nombre de la Categoria:</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Nombre de la categoria  " required >
 
                             </div>
 
 
 
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Monto</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Comprobante</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Estado</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
+                            
+                            
 
 
 
 
+
+
+                         
 
 
                     
@@ -140,7 +121,7 @@
           
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">telefono</label>
-            <input type="text"  name="telefono"class="form-control" value=""id="exampleInputPassword1">
+            <input type="number"  name="telefono"class="form-control" value=""id="exampleInputPassword1">
           </div>
 
           <div class="mb-3">
@@ -177,58 +158,10 @@
 
 
 
-                        
-                        <br>
-                        <br>
-                        <br>
-                        <table class="table" id="userstable">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Dni</th>
-      <th scope="col">Apellidos_Nombres</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Nacimiento</th>
-      <th scope="col">Accion</th>
-    </tr>
-  
-
-  </thead>
-  <tbody>
-
-
-    <?php
-    $sql=$conn->query("Select*from usuario");
-    while($raul=$sql->fetch_object()){?>
-<tr>
-      <th scope="row"><?=$raul->id ?></th>
-      <td><?=$raul->dni ?></td>
-      <td><?=$raul->apellidos_nombres ?></td>
-      <td><?=$raul->correo ?></td>
-      <td><?=$raul->telefono ?></td>
-      <td><?=$raul->direccion ?></td>
-      <td><?=$raul->fecha_nacimiento ?></td>
-    <td>
-    
-        <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
-        <a href="eliminar_usuarios.php" type="button" class="btn btn-danger"><i class="fa-solid- fa-pen-to-square">Eliminar</i></a>
-       
-      </td>
-    </tr>
-
-
-   <?php }
-
-
-
-    ?>
-
-   
-  </tbody>
-</table>
 <!-- table -->
+
+
+
                         </div>
                         
                     </div>

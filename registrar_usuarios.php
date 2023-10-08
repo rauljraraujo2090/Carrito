@@ -18,8 +18,8 @@ echo $telefono."<br>";
 echo $direccion."<br>";
 echo $fecha_naci."<br>";
 
-$consulta="INSERT INTO usuario(dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password, activo, reset_password, token_password)
-VALUES ('$dni', '$ape_nom', '$correo', '$telefono', '$direccion', '$fecha_naci', '$dni',1,0,'')";
+$consulta="INSERT INTO usuario(dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password,id_rol,foto, activo, reset_password, token_password)
+VALUES ('$dni', '$ape_nom', '$correo', '$telefono', '$direccion', '$fecha_naci', '$dni','',1,0,'')";
 
 $ejecutar= mysqli_query($conn, $consulta);
 

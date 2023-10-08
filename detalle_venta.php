@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos</title>
+    <title>Clientes</title>
     <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
@@ -30,44 +30,27 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-10">
-                    <h4>Registrar Pedidos</h4>
+                    <h4>Detalles de Venta</h4>
                     </div>
                     <div class="card">
                         <div class="card-body">
 
                         <form action="registrar_usuarios.php" method="post">
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Entrega</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-
-
-                              <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Metodo de Pago</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="" required >
-
-                            </div>
-
+                       
 
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Monto</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Descuentos</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
 
                             </div>
 
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Comprobante</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Estado</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
+                                    <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Importe</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
 
                             </div>
+
 
 
 
