@@ -41,13 +41,13 @@
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Descuentos</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
 
                             </div>
 
                                     <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Importe</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
 
                             </div>
 

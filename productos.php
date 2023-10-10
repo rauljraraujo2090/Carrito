@@ -41,26 +41,26 @@
 
                             <div class="form-group row">
                             <label class="col-lg-2 col-md-2 col-sm-12" for="">Descripcion</label>
-                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  "required>
+                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese la descripcion  "required>
 
                             </div>
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Detalle</label>
-                                <input type="text"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
+                                <input type="text"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese el detalle"required>
 
                             </div>
 
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Precio Venta</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese  el precio venta "required>
 
                             </div>
 
 
 
-
+<!----
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Stock</label>
                                 <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
@@ -76,6 +76,40 @@
                                 <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
 
                             </div>
+---->
+
+
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-md-2 col-sm-12">Stock</label>
+                               
+                                    <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>Seleccione Estock </option>
+                                    <option>Soluciones</option>
+                                     <option>Soluciones</option>
+                                      
+  
+                                      
+                                    </select>
+                                 </div>
+
+
+
+                                 <div class="form-group row">
+                                <label class="col-lg-2 col-md-2 col-sm-12">Estado</label>
+                               
+                                    <select name="estado" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>Seleccione Estado </option>
+                                    <option>Soluciones</option>
+                                    <option>Soluciones</option>
+                                       
+  
+                                      
+                                    </select>
+                                 </div>
+
+
+
+                          
 
 
                             <div class="form-group row ">

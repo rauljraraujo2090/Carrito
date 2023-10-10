@@ -70,7 +70,7 @@
 
 
 
-
+                            <!---
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Metodo de Pago</label>
                                 <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Metodo de Pago "required>
@@ -78,7 +78,26 @@
                             </div>
 
 
-                    
+                    --->
+
+
+                            
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-md-2 col-sm-12">Metodo de Pago</label>
+                               
+                                    <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>Seleccione Metodo  </option>
+                                    <option>Soluciones</option>
+                                     <option>Soluciones</option>
+                                      
+  
+                                      
+                                    </select>
+                                 </div>
+
+
+
+
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>

@@ -80,7 +80,7 @@
                         <a href="ventas.php" class="waves-effect"><i class="feather-shopping-bag"></i>Ventas</a>
                     </li>
                     <li>
-                        <a href="productos.php" class="waves-effect"><i class="feather-shopping-bag"></i>Productos</a>
+                        <a href="productos.php" class="waves-effect"><i class="dripicons-cart"></i>Productos</a>
                     </li>
 
 
@@ -129,7 +129,7 @@
 
 
                     <li>
-                        <a href="sistema.php" class="waves-effect"><i class="fas fa-users"></i>Sistema</a>
+                        <a href="sistema.php" class="waves-effect"><i class="feather-monitor"></i>Sistema</a>
                     </li>
 
 

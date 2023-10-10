@@ -42,12 +42,33 @@
 
                             </div>
 
-
+                    <!---
                               <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Metodo de Pago</label>
                                 <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="" required >
 
                             </div>
+--->
+
+
+
+
+
+                                  <div class="form-group row">
+                                <label class="col-lg-2 col-md-2 col-sm-12">Metodo de Pago</label>
+                               
+                                    <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>-----Seleccione el Metodo ----- </option>
+                                    <option>Soluciones</option>
+                                     <option>Soluciones</option>
+                                      
+  
+                                      
+                                    </select>
+                                 </div>
+
+
+
 
 
 
@@ -63,14 +84,29 @@
                                 <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
 
                             </div>
+
+                            <!----
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Estado</label>
                                 <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
 
                             </div>
 
+                                     --->
 
 
+                                     <div class="form-group row">
+                                <label class="col-lg-2 col-md-2 col-sm-12">Estado</label>
+                               
+                                    <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>----Seleccione Estado----</option>
+                                    <option>Soluciones</option>
+                                     <option>Soluciones</option>
+                                      
+  
+                                      
+                                    </select>
+                                 </div>
 
 
 
