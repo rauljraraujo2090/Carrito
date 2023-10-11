@@ -87,8 +87,9 @@
                                
                                     <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                     <option>Seleccione Metodo  </option>
-                                    <option>Soluciones</option>
-                                     <option>Soluciones</option>
+                                    <option>yape</option>
+                                     <option>Plin</option>
+                                     <option>Interbanck</option>
                                       
   
                                       

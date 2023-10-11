@@ -99,9 +99,11 @@
                                 <label class="col-lg-2 col-md-2 col-sm-12">Estado</label>
                                
                                     <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    <option>----Seleccione Estado----</option>
-                                    <option>Soluciones</option>
-                                     <option>Soluciones</option>
+                                    <option>Seleccione Estado  </option>
+                                    <option>yape</option>
+                                     <option>Plin</option>
+                                     <option>Interbanck</option>
+                                      
                                       
   
                                       
