@@ -8,7 +8,8 @@ $correo=$_POST['correo'];
 $telefono=$_POST['telefono'];
 $direccion=$_POST['direccion'];
 $fecha_naci=$_POST['nacimiento'];
-
+$foto=$_POST['img'];
+$rol=$_POST['rol'];
 //mostrar la informacion
 
 echo $dni."<br>";
@@ -18,8 +19,18 @@ echo $telefono."<br>";
 echo $direccion."<br>";
 echo $fecha_naci."<br>";
 
+
+
+$nombre_archivo=$dni.".jpg";
+
+$ruta_foto="../img_usuarios/".$nombre_archivo";
+
+move_uploaded_file($_FILES['img']['tmp_name'], $ruta_foto);
+
+
+
 $consulta="INSERT INTO usuario(dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password,id_rol,foto, activo, reset_password, token_password)
-VALUES ('$dni', '$ape_nom', '$correo', '$telefono', '$direccion', '$fecha_naci', '$dni',1,'',1,0,'')";
+VALUES ('$dni', '$ape_nom', '$correo', '$telefono', '$direccion', '$fecha_naci', '$dni',$rol,','$foto'',1,0,'')";
 
 $ejecutar= mysqli_query($conn, $consulta);
 

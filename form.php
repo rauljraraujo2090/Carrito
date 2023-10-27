@@ -35,7 +35,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                        <form action="registrar_usuarios.php" method="post">
+                        <form action="registrar_usuarios.php" method="post" enctype="multipart/form-data">
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
                                 <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
@@ -80,9 +80,37 @@
                                 <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
 
                             </div>
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Foto</label>
+                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12" accept="image/*"  name="img"placeholder="Ingrese su Fecha de Nacimiento "required>
+
+                            </div>
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Rol</label>
+                                
+                             <select name="rol" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
+                           <optio value=""></optio>
+                             <?php
+                             $consulta_rol="SELECT*FROM roles";
+                             $ejecutar= mysqli_query($conn, $consulta_rol);
+                             while($datos_roles=mysqli_fetch_array($ejecutar)){?>
+                            
 
 
-                    
+                              <option value="<?php echo  $datos_roles['id'];?>"><?php  echo $datos_roles['nombre'];?></option>
+                          
+                             
+                             
+                            
+                             <?php }?>
+                            
+                             </select>
+                            </div>
+
+
+
+                            
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
@@ -199,6 +227,8 @@
       <th scope="col">Telefono</th>
       <th scope="col">Direccion</th>
       <th scope="col">Nacimiento</th>
+      <th scope="col">Rol</th>
+      <th scope="col">Imagen</th>
       <th scope="col">Accion</th>
     </tr>
   
@@ -218,6 +248,8 @@
       <td><?=$raul->telefono ?></td>
       <td><?=$raul->direccion ?></td>
       <td><?=$raul->fecha_nacimiento ?></td>
+      <td><?=$raul->id_rol ?></td>
+      <td><?=$raul->imagen ?></td>
     <td>
     
         <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
