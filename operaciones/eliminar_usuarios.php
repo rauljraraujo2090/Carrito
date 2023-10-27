@@ -5,7 +5,7 @@ include("conexion.php");
 $id = $_GET['id'];
 
 
-$sql = "DELETE FROM usuarios WHERE username='$id'";
+$sql = "DELETE FROM usuarios WHERE id='$id'";
 if(mysqli_query($mysqli, $sql)){
     echo '<script language="javascript">';
 	echo 'alert("Registro eliminado exitósamente");';

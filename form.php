@@ -217,7 +217,7 @@
                         <br>
                         <br>
                         <br>
-                        <table class="table border" id="userstable">
+                        <table class="table table-bordered"id="userstable">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -227,6 +227,7 @@
       <th scope="col">Telefono</th>
       <th scope="col">Direccion</th>
       <th scope="col">Nacimiento</th>
+      <th scope="col">Contraseña</th>
       <th scope="col">Rol</th>
       <th scope="col">Imagen</th>
       <th scope="col">Accion</th>
@@ -248,6 +249,7 @@
       <td><?=$raul->telefono ?></td>
       <td><?=$raul->direccion ?></td>
       <td><?=$raul->fecha_nacimiento ?></td>
+      <td><?=$raul->password?></td>
       <td><?=$raul->id_rol ?></td>
       <td><?=$raul->imagen ?></td>
     <td>

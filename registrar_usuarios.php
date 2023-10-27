@@ -8,7 +8,7 @@ $correo=$_POST['correo'];
 $telefono=$_POST['telefono'];
 $direccion=$_POST['direccion'];
 $fecha_naci=$_POST['nacimiento'];
-$foto=$_POST['img'];
+
 $rol=$_POST['rol'];
 //mostrar la informacion
 
@@ -23,21 +23,38 @@ echo $fecha_naci."<br>";
 
 $nombre_archivo=$dni.".jpg";
 
-$ruta_foto="../img_usuarios/".$nombre_archivo";
+$ruta_foto="img_usuarios/".$nombre_archivo;
 
-move_uploaded_file($_FILES['img']['tmp_name'], $ruta_foto);
+    
+$pass_secure = password_hash($dni, PASSWORD_DEFAULT);
 
 
 
-$consulta="INSERT INTO usuario(dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password,id_rol,foto, activo, reset_password, token_password)
-VALUES ('$dni', '$ape_nom', '$correo', '$telefono', '$direccion', '$fecha_naci', '$dni',$rol,','$foto'',1,0,'')";
+  if(move_uploaded_file($_FILES['img']['tmp_name'], $ruta_foto)){
 
-$ejecutar= mysqli_query($conn, $consulta);
 
-if ($ejecutar) {
-    echo "Registro Exitoso";
-}else {
-    echo "Registro Fallido";
+    $consulta="INSERT INTO usuario(dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password,id_rol,foto, activo, reset_password, token_password)
+    VALUES ('$dni', '$ape_nom', '$correo', '$telefono', '$direccion', '$fecha_naci','$pass_secure','$rol','$nombre_archivo',1,0,'')";
+    
+    $ejecutar= mysqli_query($conn, $consulta);
+    
+    if ($ejecutar) {
+        echo "Registro Exitoso";
+    }else {
+        echo "Registro Fallido";
+    }
+
+
+}else{
+
+echo "fallo al enviar la foto";
+
+
+      
+    
 }
+
+
+
 
 ?>
