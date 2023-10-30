@@ -35,10 +35,17 @@
                     <div class="card">
                         <div class="card-body">
 
-                        <form action="registrar_usuarios.php" method="post">
+                        <form action="registrar_clientes.php" method="post">
+
+
+                        <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">ruc_dni :</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="ruc"placeholder="Ingrese el Telefono "required>
+
+                            </div>
                         <div class="form-group row">
                             <label class="col-lg-2 col-md-2 col-sm-12" for="">Razon Social</label>
-                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese  nombre  "required>
+                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="nombre"placeholder="Ingrese  nombre  "required>
 
                             </div>
 
@@ -68,7 +75,7 @@
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion de Envio</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese el Direccion de envio "required>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="envio"placeholder="Ingrese el Direccion de envio "required>
 
                             </div>
 

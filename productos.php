@@ -41,20 +41,20 @@
 
                             <div class="form-group row">
                             <label class="col-lg-2 col-md-2 col-sm-12" for="">Descripcion</label>
-                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese la descripcion  "required>
+                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="descripcion"placeholder="Ingrese la descripcion  "required>
 
                             </div>
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Detalle</label>
-                                <input type="text"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese el detalle"required>
+                                <input type="text"class="form-control col-lg-10 col-md-10 col-sm-12"  name="detalles"placeholder="Ingrese el detalle"required>
 
                             </div>
 
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Precio Venta</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese  el precio venta "required>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="precioventa"placeholder="Ingrese  el precio venta "required>
 
                             </div>
 
@@ -84,8 +84,8 @@
                                
                                     <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                     <option>Seleccione Estock </option>
-                                    <option>Soluciones</option>
-                                     <option>Soluciones</option>
+                                    <option>1</option>
+                                     <option>0</option>
                                       
   
                                       
@@ -99,8 +99,8 @@
                                
                                     <select name="estado" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                     <option>Seleccione Estado </option>
-                                    <option>Soluciones</option>
-                                    <option>Soluciones</option>
+                                    <option>activo</option>
+                                    <option>agotado</option>
                                        
   
                                       
@@ -114,7 +114,7 @@
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Imagen</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
+                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="image"placeholder="Ingrese su Telefono "required>
 
                             </div>
 

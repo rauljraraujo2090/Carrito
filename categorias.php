@@ -35,27 +35,13 @@
                     <div class="card ">
                         <div class="card-body">
 
-                        <form action="registrar_usuarios.php" method="post">
+                        <form action="registrar_categorias.php" method="post">
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Nombre de la Categoria:</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Nombre de la categoria  " required >
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="categoria" autocomplete="off"placeholder="Nombre de la categoria  " required >
 
                             </div>
 
-
-
-                            
-                            
-
-
-
-
-
-
-                         
-
-
-                    
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
@@ -153,7 +139,48 @@
 
 
 
+<br>
+                        <br>
+                        <br>
+                        <table class="table table-bordered"id="userstable">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      
+    </tr>
+  
 
+  </thead>
+  <tbody>
+
+
+    <?php
+    $sql=$conn->query("Select*from categoria");
+    while($raul=$sql->fetch_object()){?>
+<tr>
+      <th scope="row"><?=$raul->id ?></th>
+      <td><?=$raul->nombre ?></td>
+      
+    <td>
+    
+        <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
+        <a href="eliminar_usuarios.php" type="button" class="btn btn-danger"><i class="fa-solid- fa-pen-to-square">Eliminar</i></a>
+       
+      </td>
+    </tr>
+
+
+   <?php }
+
+
+
+    ?>
+
+   
+  </tbody>
+</table>
+<!-- table -->
 
 
 
