@@ -35,8 +35,19 @@
                     <div class="card">
                         <div class="card-body">
 
-                        <form action="registrar_usuarios.php" method="post">
+                        <form action="registrar_productos.php" method="post">
                           
+
+
+                        <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Codigo</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="codigo"placeholder="Ingrese  el precio venta "required>
+
+                            </div>
+
+
+
+
 
 
                             <div class="form-group row">
@@ -52,9 +63,48 @@
                             </div>
 
 
+
+
+
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">id_Categoria</label>
+                                
+                             <select name="categoria" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
+                           <optio value=""></optio>
+                             <?php
+                             $consulta_categoria="SELECT*FROM categoria";
+                             $ejecutar= mysqli_query($conn, $consulta_categoria);
+                             while($datos_categoria=mysqli_fetch_array($ejecutar)){?>
+                            
+
+
+                              <option value="<?php echo  $datos_categoria['id'];?>"><?php  echo $datos_categoria['nombre'];?></option>
+                          
+                     
+                             <?php }?>
+                            
+                             </select>
+                            </div>
+
+
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Precio compra</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="precio_compra"placeholder="Ingrese  el precio venta "required>
+
+                            </div>
+
+
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Precio Venta</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="precioventa"placeholder="Ingrese  el precio venta "required>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="precio_venta"placeholder="Ingrese  el precio venta "required>
 
                             </div>
 
@@ -112,11 +162,38 @@
                           
 
 
-                            <div class="form-group row ">
+                                 <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Imagen</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="image"placeholder="Ingrese su Telefono "required>
+                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12" accept="image/*"  name="img"placeholder="Ingrese su Fecha de Nacimiento "required>
 
                             </div>
+
+
+
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">id_Proveedor</label>
+                                
+                             <select name="proveedor" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
+                           <optio value=""></optio>
+                             <?php
+                             $consulta_proveedor="SELECT*FROM proveedor";
+                             $ejecutar= mysqli_query($conn, $consulta_proveedor);
+                             while($datos_proveedor=mysqli_fetch_array($ejecutar)){?>
+                            
+
+
+                              <option value="<?php echo  $datos_proveedor['id'];?>"><?php  echo $datos_proveedor['razon_social'];?></option>
+                          
+                     
+                             <?php }?>
+                            
+                             </select>
+                            </div>
+
 
 
 
@@ -174,7 +251,7 @@
         <form action="" method="post">
 
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Dni</label>
+            <label for="exampleInputEmail1" class="form-label">Codigo</label>
             <input type="number" name="dni"class="form-control" id="exampleInputEmail1" value=""aria-describedby="emailHelp">
            
           </div>
@@ -235,12 +312,16 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Dni</th>
-      <th scope="col">Apellidos_Nombres</th>
-      <th scope="col">Correo</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Direccion</th>
-      <th scope="col">Nacimiento</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Detalle</th>
+      <th scope="col">id_Categoria</th>
+      <th scope="col">P_Compra</th>
+      <th scope="col">P_Venta</th>
+      <th scope="col">Stock</th>
+      <th scope="col">estado</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">id_Proveedor</th>
       <th scope="col">Accion</th>
     </tr>
   
@@ -250,16 +331,21 @@
 
 
     <?php
-    $sql=$conn->query("Select*from usuario");
+    $sql=$conn->query("Select*from producto");
     while($raul=$sql->fetch_object()){?>
 <tr>
       <th scope="row"><?=$raul->id ?></th>
-      <td><?=$raul->dni ?></td>
-      <td><?=$raul->apellidos_nombres ?></td>
-      <td><?=$raul->correo ?></td>
-      <td><?=$raul->telefono ?></td>
-      <td><?=$raul->direccion ?></td>
-      <td><?=$raul->fecha_nacimiento ?></td>
+      <td><?=$raul->codigo ?></td>
+      <td><?=$raul->descripcion ?></td>
+      <td><?=$raul->detalle ?></td>
+      <td><?=$raul->id_categoria ?></td>
+      <td><?=$raul->precio_compra ?></td>
+      <td><?=$raul->precio_venta ?></td>
+
+      <td><?=$raul->stock ?></td>
+      <td><?=$raul->estado ?></td>
+      <td><?=$raul->imagen ?></td>
+      <td><?=$raul->id_proveedor ?></td>
     <td>
     
         <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
