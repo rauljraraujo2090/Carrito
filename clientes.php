@@ -191,12 +191,12 @@
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">Dni</th>
-      <th scope="col">Apellidos_Nombres</th>
+      <th scope="col">Ruc_dni</th>
+      <th scope="col">Razon Social</th>
       <th scope="col">Correo</th>
       <th scope="col">Telefono</th>
       <th scope="col">Direccion</th>
-      <th scope="col">Nacimiento</th>
+      <th scope="col">Lugar de Envio</th>
       <th scope="col">Accion</th>
     </tr>
   
@@ -206,16 +206,16 @@
 
 
     <?php
-    $sql=$conn->query("Select*from usuario");
+    $sql=$conn->query("Select*from cliente");
     while($raul=$sql->fetch_object()){?>
 <tr>
       <th scope="row"><?=$raul->id ?></th>
-      <td><?=$raul->dni ?></td>
-      <td><?=$raul->apellidos_nombres ?></td>
+      <td><?=$raul->ruc_dni ?></td>
+      <td><?=$raul->razon_social?></td>
       <td><?=$raul->correo ?></td>
       <td><?=$raul->telefono ?></td>
       <td><?=$raul->direccion ?></td>
-      <td><?=$raul->fecha_nacimiento ?></td>
+      <td><?=$raul->direccion_envio ?></td>
     <td>
     
         <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>

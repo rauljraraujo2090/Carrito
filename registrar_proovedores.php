@@ -11,7 +11,7 @@ $direccion=$_POST['direccion'];
 $m_pago=$_POST['stock'];
 
 $consulta="INSERT INTO proveedor(ruc,razon_social,correo,telefono,direccion,metodo_pago)
-    VALUES ('$ruc','$razon_social','$telefono','$correo','$direccion','$m_pago')";
+    VALUES ('$ruc','$razon_social','$correo','$telefono','$direccion','$m_pago')";
     
     $ejecutar= mysqli_query($conn, $consulta);
 

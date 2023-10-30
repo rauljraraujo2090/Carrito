@@ -10,8 +10,8 @@ $telefono=$_POST['telefono'];
 $direccion=$_POST['direccion'];
 $envio=$_POST['envio'];
 
-$consulta="INSERT INTO cliente(ruc,razon_social,correo,telefono,direccion,direccion_envio)
-    VALUES ('$ruc','$razon_social','$telefono','$correo','$direccion','$m_pago')";
+$consulta="INSERT INTO cliente(ruc_dni,razon_social,correo,telefono,direccion,direccion_envio)
+    VALUES ('$ruc','$razon_social','$correo','$telefono','$direccion','$envio')";
     
     $ejecutar= mysqli_query($conn, $consulta);
 
