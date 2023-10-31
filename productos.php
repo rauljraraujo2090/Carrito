@@ -164,7 +164,7 @@
 
                                  <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Imagen</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12" accept="image/*"  name="img"placeholder="Ingrese su Fecha de Nacimiento "required>
+                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12" accept="image/*"  name="img"   placeholder="Ingrese su Fecha de Nacimiento "required>
 
                             </div>
 
