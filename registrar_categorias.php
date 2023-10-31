@@ -11,6 +11,7 @@ $consulta="INSERT INTO categoria(nombre)
 
     if ($ejecutar) {
         echo "Registro Exitoso";
+        header('Location:categorias.php');
     }else {
         echo "Registro Fallido";
     }

@@ -35,7 +35,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                        <form action="registrar_productos.php" method="post">
+                        <form action="registrar_productos.php" method="post"enctype="multipart/form-data">
                           
 
 

@@ -17,6 +17,7 @@ $consulta="INSERT INTO cliente(ruc_dni,razon_social,correo,telefono,direccion,di
 
     if ($ejecutar) {
         echo "Registro Exitoso";
+        header('Location:clientes.php');
     }else {
         echo "Registro Fallido";
     }

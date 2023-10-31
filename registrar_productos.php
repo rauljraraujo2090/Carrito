@@ -22,7 +22,7 @@ $nombre_archivo=$codigo.".jpg";
 $ruta_foto="img_productos/".$nombre_archivo;
 
     
-//$pass_secure = password_hash($descripcion, PASSWORD_DEFAULT);
+//$pass_secure = password_hash($codigo, PASSWORD_DEFAULT);
 
 
 
