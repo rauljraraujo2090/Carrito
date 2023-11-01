@@ -30,7 +30,7 @@ $ruta_foto="img_productos/".$nombre_archivo;
 
 
     $consulta="INSERT INTO producto(codigo, descripcion, detalle, id_categoria,precio_compra,precio_venta,stock,estado,imagen,id_proveedor )
-    VALUES ('$codigo', '$descipcion', '$detalles', '$id_categori', '$p_c', '$p_v','$stock','$estado','$nombre_archivo','$id_proveedor)";
+    VALUES ('$codigo', '$descripcion', '$detalles', '$id_categori', '$p_c', '$p_v','$stock','$estado','$nombre_archivo','$id_proveedor')";
     
     $ejecutar= mysqli_query($conn, $consulta);
     

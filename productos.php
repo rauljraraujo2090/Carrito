@@ -149,8 +149,8 @@
                                
                                     <select name="estado" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                     <option>Seleccione Estado </option>
-                                    <option>activo</option>
-                                    <option>agotado</option>
+                                    <option>1</option>
+                                    <option>2</option>
                                        
   
                                       
