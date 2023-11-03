@@ -88,8 +88,12 @@
                         <a href="categorias.php" class="waves-effect"><i class="feather-shopping-bag"></i>Categoria</a>
                     </li>
 
-
-
+                    <li>
+                        <a href="roles.php" class="waves-effect"><i class="feather-shopping-bag"></i>Rol</a>
+                    </li>
+                    <li>
+                        <a href="clientes.php" class="waves-effect"><i class="feather-users"></i>Clientes</a>
+                    </li>
 
                     <li>
                         <a href="form.php" class="waves-effect"><i class="feather-users"></i>Usuarios</a>
