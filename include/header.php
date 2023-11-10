@@ -96,7 +96,7 @@
                     </li>
 
                     <li>
-                        <a href="form.php" class="waves-effect"><i class="feather-users"></i>Usuarios</a>
+                        <a href="index.php" class="waves-effect"><i class="feather-users"></i>Usuarios</a>
                     </li>
                     <li>
                         <a href="pedidos.php" class="waves-effect"><i class="feather-truck"></i>Pedidos</a>
