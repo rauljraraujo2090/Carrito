@@ -9,12 +9,10 @@
     <link href="plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <?php 
-    // Lenguaje en php
-    include("../include/header
-    .php");
-
+<?php
+    require('include/header.php');
     ?>
+     
 
     <!-- INICIO DE CONTENIDO -->
     <div class="main-content">
