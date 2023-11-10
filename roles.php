@@ -20,7 +20,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
+                    <?php  
+                      include("include/modal_frm_reg_roles.php");
+                      ?>
                         <h4>Registrar Roles</h4>
+                        <!---
                         <div class="card">
                             <div class="card-body">
                                 <form action="registrar_roles.php" method="POST">
@@ -35,6 +39,7 @@
                                 </form>
                             </div>
                         </div>
+                        --->
                     </div>
                 </div>
             </div>

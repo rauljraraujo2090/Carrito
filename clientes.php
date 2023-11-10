@@ -30,8 +30,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-10">
-                    <h4>Registrar Clientes</h4>
+                    <?php  
+                      include("include/modal_frm_reg_clientes.php");
+                      ?>
+                   <!--- <h4>Registrar Clientes</h4>-->
                     </div>
+                    <!----
                     <div class="card">
                         <div class="card-body">
 
@@ -97,8 +101,7 @@
                         
                     </div>
 
-
-
+---->
 
 
 

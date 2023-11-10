@@ -30,8 +30,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-10">
-                    <h4>Registrar Categorias</h4>
+                    <?php  
+                      include("include/modal_frm_reg_categorias.php");
+                      ?>
+                  <!---  <h4>Registrar Categorias</h4>--->
                     </div>
+                    <!---
                     <div class="card ">
                         <div class="card-body">
 
@@ -57,6 +61,8 @@
                         </div>
                         
                     </div>
+
+-->
 
 
 
