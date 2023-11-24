@@ -169,10 +169,8 @@
       <th scope="col">Correo</th>
       <th scope="col">Telefono</th>
       <th scope="col">Direccion</th>
-      
       <th scope="col">Rol</th>
       <th scope="col">Imagen</th>
-
       <th scope="col">Accion</th>
     </tr>
   
@@ -191,8 +189,6 @@
       <td><?=$raul->correo ?></td>
       <td><?=$raul->telefono ?></td>
       <td><?=$raul->direccion ?></td>
-     
-     
       <td><?=$raul->id_rol ?></td>
       <td><?=$raul->imagen ?></td>
     <td>
