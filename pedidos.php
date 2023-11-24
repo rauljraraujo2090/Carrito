@@ -238,7 +238,7 @@
 
 
     <?php
-    $sql=$conn->query("Select*from usuario");
+    $sql=$conn->query("Select*from pedidos");
     while($raul=$sql->fetch_object()){?>
 <tr>
       <th scope="row"><?=$raul->id ?></th>
