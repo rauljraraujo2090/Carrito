@@ -32,74 +32,14 @@
                     <div class="col-10">
                     <h4>Sistema</h4>
                     </div>
+
+                    <?php  
+                      include("include/modal_frm_reg_pedidos.php");
+                      ?>
                     <div class="card">
                         <div class="card-body">
 
-                        <form action="registrar_usuarios.php" method="post">
-                          
-
-                        <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Servidor Correo</label>
-                            <input type="email"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder=" "required>
-
-                            </div>
-
-
-                                  <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Usuario Correo</label>
-                            <input type="email"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"required>
-
-                            </div>
-
-
-                                  <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Contraseña Correo</label>
-                            <input type="email"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="  "required>
-
-                            </div>
-
-
-
-                            <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Puerto Correo</label>
-                            <input type="email"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder=" "required>
-
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
-                                <button type="submit" class="btn btn-primary ">Registrar</button>
-
-                            </div>
-
-                      
-                      
-
-
-                        </form>
+                        
                         </div>
                         
                     </div>

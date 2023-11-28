@@ -160,9 +160,21 @@
 
                         
                        
-    <table id="basic-datatable" class="table dt-responsive nowrap">
+    
+<?php
+
+require('conexion.php');
+
+
+?>
+
+
+
+
+<table id="basic-datatable" class="table dt-responsive nowrap">
   <thead>
     <tr>
+     <th scope="col">#</th>
       <th scope="col">id</th>
       <th scope="col">Dni</th>
       <th scope="col">Apellidos_Nombres</th>
@@ -177,38 +189,45 @@
 
   </thead>
   <tbody>
+  <?php
+$consulta="select *from usuario ";
+$ejecutar=mysqli_query($conn,$consulta);
+$cont=0;
 
-
-    <?php
-    $sql=$conn->query("Select*from usuario");
-    while($raul=$sql->fetch_object()){?>
-<tr>
-      <th scope="row"><?=$raul->id ?></th>
-      <td><?=$raul->dni ?></td>
-      <td><?=$raul->apellidos_nombres ?></td>
-      <td><?=$raul->correo ?></td>
-      <td><?=$raul->telefono ?></td>
-      <td><?=$raul->direccion ?></td>
-      <td><?=$raul->id_rol ?></td>
-      <td><?=$raul->imagen ?></td>
-    <td>
-    
-        <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
-        <a href="eliminar_usuarios.php" type="button" class="btn btn-danger"><i class="fa-solid- fa-pen-to-square">Eliminar</i></a>
-       
-      </td>
-    </tr>
-
-
-   <?php }
-
-
-
-    ?>
-
+while($respuesta=mysqli_fetch_array($ejecutar)){
+    $cont++;
    
+echo"<tr>";
+echo"<td>".$cont."</td>";
+echo"<td>".$respuesta['id']."</td>";
+echo"<td>".$respuesta['dni']."</td>";
+echo"<td>".$respuesta['apellidos_nombres']."</td>";
+echo"<td>".$respuesta['correo']."</td>";
+echo"<td>".$respuesta['telefono']."</td>";
+echo"<td>".$respuesta['direccion']."</td>";
+echo"<td>".$respuesta['id_rol']."</td>";
+echo"<td>".$respuesta['foto']."</td>";
+
+echo"<td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";
+
+
+
+
+
+echo"</tr>";
+
+
+    
+
+}
+
+
+
+?>
   </tbody>
 </table>
+
+
 
 <!-- table -->
                         </div>

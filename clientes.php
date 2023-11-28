@@ -119,62 +119,6 @@
 
 
 
-                        <!-- Modal -->
-<div class="modal fade" id="modaleditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">editar datos del Usuario</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-
-        <form action="" method="post">
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Dni</label>
-            <input type="number" name="dni"class="form-control" id="exampleInputEmail1" value=""aria-describedby="emailHelp">
-           
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Apellidos_Nombres</label>
-            <input type="text" name="a_n"class="form-control" id="exampleInputEmail1" value=""aria-describedby="emailHelp">
-           
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">correo</label>
-            <input type="email"  name="correo"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-          
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">telefono</label>
-            <input type="text"  name="telefono"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Direccion</label>
-            <input type="text"  name="direccion"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Fecha_Nacimiento</label>
-            <input type="date"  name="nacimiento"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-          
-          <button type="submit" class="btn btn-primary">editar</button>
-        </form>
-
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Save </button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -183,58 +127,62 @@
 
 
 
-
-
-
-                        
-                        <br>
-                        <br>
-                        <br>
-                        <table class="table" id="userstable">
+<br>
+<br>
+<br>
+<table id="basic-datatable" class="table dt-responsive nowrap">
   <thead>
     <tr>
+     <th scope="col">#</th>
       <th scope="col">id</th>
-      <th scope="col">Ruc_dni</th>
+      <th scope="col">Ruc_Dni</th>
       <th scope="col">Razon Social</th>
+      <th scope="col">Telefono/th>
       <th scope="col">Correo</th>
-      <th scope="col">Telefono</th>
       <th scope="col">Direccion</th>
-      <th scope="col">Lugar de Envio</th>
+      <th scope="col">Direccion de envio</th>
+  
       <th scope="col">Accion</th>
     </tr>
   
 
   </thead>
   <tbody>
+  <?php
+$consulta="select *from cliente ";
+$ejecutar=mysqli_query($conn,$consulta);
+$cont=0;
 
-
-    <?php
-    $sql=$conn->query("Select*from cliente");
-    while($raul=$sql->fetch_object()){?>
-<tr>
-      <th scope="row"><?=$raul->id ?></th>
-      <td><?=$raul->ruc_dni ?></td>
-      <td><?=$raul->razon_social?></td>
-      <td><?=$raul->correo ?></td>
-      <td><?=$raul->telefono ?></td>
-      <td><?=$raul->direccion ?></td>
-      <td><?=$raul->direccion_envio ?></td>
-    <td>
-    
-        <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
-        <a href="eliminar_usuarios.php" type="button" class="btn btn-danger"><i class="fa-solid- fa-pen-to-square">Eliminar</i></a>
-       
-      </td>
-    </tr>
-
-
-   <?php }
-
-
-
-    ?>
-
+while($respuesta=mysqli_fetch_array($ejecutar)){
+    $cont++;
    
+echo"<tr>";
+echo"<td>".$cont."</td>";
+echo"<td>".$respuesta['id']."</td>";
+echo"<td>".$respuesta['ruc_dni']."</td>";
+echo"<td>".$respuesta['razon_social']."</td>";
+echo"<td>".$respuesta['telefono']."</td>";
+echo"<td>".$respuesta['correo']."</td>";
+echo"<td>".$respuesta['direccion']."</td>";
+echo"<td>".$respuesta['direccion_envio']."</td>";
+
+
+echo"<td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";
+
+
+
+
+
+echo"</tr>";
+
+
+    
+
+}
+
+
+
+?>
   </tbody>
 </table>
 <!-- table -->

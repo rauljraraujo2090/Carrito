@@ -115,7 +115,6 @@
 
 
 
-<!----
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Stock</label>
                                 <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
@@ -309,64 +308,71 @@
 
 
 
-                        
-                        <br>
-                        <br>
-                        <br>
-                        <table class="table" id="userstable">
+         
+<br>
+<br>
+<table id="basic-datatable" class="table dt-responsive nowrap">
   <thead>
     <tr>
+     <th scope="col">#</th>
       <th scope="col">id</th>
       <th scope="col">Codigo</th>
-      <th scope="col">Descripcion</th>
+      <th scope="col">descripcion</th>
       <th scope="col">Detalle</th>
-      <th scope="col">id_Categoria</th>
-      <th scope="col">P_Compra</th>
-      <th scope="col">P_Venta</th>
+      <th scope="col">id_categoria</th>
+      <th scope="col">Precio Compra</th>
+      <th scope="col">Precio venta</th>
       <th scope="col">Stock</th>
-      <th scope="col">estado</th>
+      <th scope="col">Estado</th>
       <th scope="col">Imagen</th>
-      <th scope="col">id_Proveedor</th>
+      <th scope="col">Id_proveedor</th>
+
+  
       <th scope="col">Accion</th>
     </tr>
   
 
   </thead>
   <tbody>
+  <?php
+$consulta="select *from producto ";
+$ejecutar=mysqli_query($conn,$consulta);
+$cont=0;
 
-
-    <?php
-    $sql=$conn->query("Select*from producto");
-    while($raul=$sql->fetch_object()){?>
-<tr>
-      <th scope="row"><?=$raul->id ?></th>
-      <td><?=$raul->codigo ?></td>
-      <td><?=$raul->descripcion ?></td>
-      <td><?=$raul->detalle ?></td>
-      <td><?=$raul->id_categoria ?></td>
-      <td><?=$raul->precio_compra ?></td>
-      <td><?=$raul->precio_venta ?></td>
-
-      <td><?=$raul->stock ?></td>
-      <td><?=$raul->estado ?></td>
-      <td><?=$raul->imagen ?></td>
-      <td><?=$raul->id_proveedor ?></td>
-    <td>
-    
-        <a href="actualizar.php" type="button" data-bs-toggle="modal" data-bs-target="#modaleditar" class="btn btn-success"><i class="fa-solid- fa-pen-to-square">Editar</i></a>
-        <a href="eliminar_usuarios.php" type="button" class="btn btn-danger"><i class="fa-solid- fa-pen-to-square">Eliminar</i></a>
-       
-      </td>
-    </tr>
-
-
-   <?php }
-
-
-
-    ?>
-
+while($respuesta=mysqli_fetch_array($ejecutar)){
+    $cont++;
    
+echo"<tr>";
+echo"<td>".$cont."</td>";
+echo"<td>".$respuesta['id']."</td>";
+echo"<td>".$respuesta['codigo']."</td>";
+echo"<td>".$respuesta['descripcion']."</td>";
+echo"<td>".$respuesta['detalle']."</td>";
+echo"<td>".$respuesta['id_categoria']."</td>";
+echo"<td>".$respuesta['precio_compra']."</td>";
+echo"<td>".$respuesta['precio_venta']."</td>";
+echo"<td>".$respuesta['stock']."</td>";
+echo"<td>".$respuesta['estado']."</td>";
+echo"<td>".$respuesta['imagen']."</td>";
+echo"<td>".$respuesta['id_proveedor']."</td>";
+
+
+echo"<td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";
+
+
+
+
+
+echo"</tr>";
+
+
+    
+
+}
+
+
+
+?>
   </tbody>
 </table>
 <!-- table -->
