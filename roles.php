@@ -171,7 +171,7 @@ require('conexion.php');
   </thead>
   <tbody>
   <?php
-$consulta="select *from roles ";
+$consulta="SELECT * FROM roles ";
 $ejecutar=mysqli_query($conn,$consulta);
 $cont=0;
 

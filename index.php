@@ -170,7 +170,7 @@ require('conexion.php');
       <th scope="col">Direccion</th>
       <th scope="col">Rol</th>
       <th scope="col">Imagen</th>
-      <th scope="col">Acciones</th>
+      <th scope="col">Accion</th>
     </tr>
   
 
@@ -178,6 +178,7 @@ require('conexion.php');
   <tbody>
   <?php
 $consulta="select *from usuario ";
+$rol="select *from rol where id=nombre ";
 $ejecutar=mysqli_query($conn,$consulta);
 $cont=0;
 
