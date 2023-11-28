@@ -105,20 +105,7 @@
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Rol</label>
                                 
                              <select name="rol" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
-                           <optio value=""></optio>
-                             <?php
-                             $consulta_rol="SELECT*FROM roles";
-                             $ejecutar= mysqli_query($conn, $consulta_rol);
-                             while($datos_roles=mysqli_fetch_array($ejecutar)){?>
-                            
-
-
-                              <option value="<?php echo  $datos_roles['id'];?>"><?php  echo $datos_roles['nombre'];?></option>
-                          
-                             
-                             
-                            
-                             <?php }?>
+                           
                             
                              </select>
                             </div>
@@ -183,7 +170,7 @@ require('conexion.php');
       <th scope="col">Direccion</th>
       <th scope="col">Rol</th>
       <th scope="col">Imagen</th>
-      <th scope="col">Accion</th>
+      <th scope="col">Acciones</th>
     </tr>
   
 
