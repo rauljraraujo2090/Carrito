@@ -16,7 +16,9 @@ VALUES ('$rol')";
 $ejecutar= mysqli_query($conn, $consulta);
 
 if ($ejecutar) {
+
     echo "Registro Exitoso";
+    header('Location:roles.php ');
 }else {
     echo "Registro Fallido";
 

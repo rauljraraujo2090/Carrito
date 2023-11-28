@@ -137,7 +137,7 @@
       <th scope="col">id</th>
       <th scope="col">Ruc_Dni</th>
       <th scope="col">Razon Social</th>
-      <th scope="col">Telefono/th>
+      <th scope="col">Telefono</th>
       <th scope="col">Correo</th>
       <th scope="col">Direccion</th>
       <th scope="col">Direccion de envio</th>
