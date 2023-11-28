@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -22,7 +22,7 @@
     
 
     
- 
+    <link rel="shortcut icon" href="carrito.png">
 </head>
 
 <body>
@@ -39,182 +39,80 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-10">
-                    <?php  
+                      <?php  
                       include("include/modal_frm_reg_productos.php");
                       ?>
-                  <!---  <h4>Registrar Productos</h4>--->
 
-                    <!----
+                   
+                   <!---- <h4>Registrar Usuarios</h4>--->
                     </div>
+                    <!---
                     <div class="card">
                         <div class="card-body">
 
-                        <form action="registrar_productos.php" method="post"enctype="multipart/form-data">
-                          
-
-
-                        <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Codigo</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="codigo"placeholder="Ingrese  el precio venta "required>
+                        <form action="registrar_usuarios.php" method="post" enctype="multipart/form-data">
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
 
                             </div>
-
-
-
 
 
 
                             <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Descripcion</label>
-                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="descripcion"placeholder="Ingrese la descripcion  "required>
+                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Apellidos y Nombres</label>
+                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  "required>
 
                             </div>
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Detalle</label>
-                                <input type="text"class="form-control col-lg-10 col-md-10 col-sm-12"  name="detalles"placeholder="Ingrese el detalle"required>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Correo:</label>
+                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
+
+                            </div>
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Telefono :</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
 
                             </div>
 
 
 
 
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion:</label>
+                                <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese su Direccion"required>
 
+                            </div>
 
 
 
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">id_Categoria</label>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
+                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
+
+                            </div>
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Foto</label>
+                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12" accept="image/*"  name="img"placeholder="Ingrese su Fecha de Nacimiento "required>
+
+                            </div>
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Rol</label>
                                 
-                             <select name="categoria" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
-                           <optio value=""></optio>
-                             <?php
-                             $consulta_categoria="SELECT*FROM categoria";
-                             $ejecutar= mysqli_query($conn, $consulta_categoria);
-                             while($datos_categoria=mysqli_fetch_array($ejecutar)){?>
-                            
-
-
-                              <option value="<?php echo  $datos_categoria['id'];?>"><?php  echo $datos_categoria['nombre'];?></option>
-                          
-                     
-                             <?php }?>
+                             <select name="rol" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
+                           
                             
                              </select>
                             </div>
 
 
 
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Precio compra</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="precio_compra"placeholder="Ingrese  el precio venta "required>
-
-                            </div>
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Precio Venta</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="precio_venta"placeholder="Ingrese  el precio venta "required>
-
-                            </div>
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Stock</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
-
-                            </div>
-
-
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Estado</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
-
-                            </div>
----->
-
-<!---
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-md-2 col-sm-12">Stock</label>
-                               
-                                    <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    <option>Seleccione Estock </option>
-                                    <option>1</option>
-                                     <option>0</option>
-                                      
-  
-                                      
-                                    </select>
-                                 </div>
-
-
-
-                                 <div class="form-group row">
-                                <label class="col-lg-2 col-md-2 col-sm-12">Estado</label>
-                               
-                                    <select name="estado" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    <option>Seleccione Estado </option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                       
-  
-                                      
-                                    </select>
-                                 </div>
-
-
-
-                          
-
-
-                                 <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Imagen</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12" accept="image/*"  name="img"   placeholder="Ingrese su Fecha de Nacimiento "required>
-
-                            </div>
-
-
-
-
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">id_Proveedor</label>
-                                
-                             <select name="proveedor" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
-                           <optio value=""></optio>
-                             <?php
-                             $consulta_proveedor="SELECT*FROM proveedor";
-                             $ejecutar= mysqli_query($conn, $consulta_proveedor);
-                             while($datos_proveedor=mysqli_fetch_array($ejecutar)){?>
                             
-
-
-                              <option value="<?php echo  $datos_proveedor['id'];?>"><?php  echo $datos_proveedor['razon_social'];?></option>
-                          
-                     
-                             <?php }?>
-                            
-                             </select>
-                            </div>
-
-
-
-
-
-
-
-
-                    
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
@@ -227,10 +125,11 @@
 
 
                         </form>
+                  
                         </div>
                         
                     </div>
---->
+                    ---->
 
 
 
@@ -246,97 +145,37 @@
                         
 
 
+                        
+                       
+    
+<?php
+
+require('conexion.php');
+
+
+?>
 
 
 
 
-                        <!-- Modal -->
-<div class="modal fade" id="modaleditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">editar datos del Usuario</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-
-        <form action="" method="post">
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Codigo</label>
-            <input type="number" name="dni"class="form-control" id="exampleInputEmail1" value=""aria-describedby="emailHelp">
-           
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Apellidos_Nombres</label>
-            <input type="text" name="a_n"class="form-control" id="exampleInputEmail1" value=""aria-describedby="emailHelp">
-           
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">correo</label>
-            <input type="email"  name="correo"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-          
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">telefono</label>
-            <input type="text"  name="telefono"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Direccion</label>
-            <input type="text"  name="direccion"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Fecha_Nacimiento</label>
-            <input type="date"  name="nacimiento"class="form-control" value=""id="exampleInputPassword1">
-          </div>
-          
-          <button type="submit" class="btn btn-primary">editar</button>
-        </form>
-
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Save </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-         
-<br>
-<br>
 <table id="basic-datatable" class="table dt-responsive nowrap">
   <thead>
     <tr>
      <th scope="col">#</th>
       <th scope="col">id</th>
       <th scope="col">Codigo</th>
-      <th scope="col">descripcion</th>
-      <th scope="col">Detalle</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">detalle</th>
       <th scope="col">id_categoria</th>
-      <th scope="col">Precio Compra</th>
-      <th scope="col">Precio venta</th>
-      <th scope="col">Stock</th>
+      
+      <th scope="col">precio compra</th>
+      <th scope="col">precio venta</th>
+      <th scope="col">precio Stock</th>
       <th scope="col">Estado</th>
-      <th scope="col">Imagen</th>
-      <th scope="col">Id_proveedor</th>
+      <th scope="col">imagen</th>
+      <th scope="col">id_proovedor</th>
 
-  
+
       <th scope="col">Accion</th>
     </tr>
   
@@ -345,6 +184,7 @@
   <tbody>
   <?php
 $consulta="select *from producto ";
+
 $ejecutar=mysqli_query($conn,$consulta);
 $cont=0;
 
@@ -384,6 +224,9 @@ echo"</tr>";
 ?>
   </tbody>
 </table>
+
+
+
 <!-- table -->
                         </div>
                         
@@ -417,8 +260,33 @@ echo"</tr>";
 
 
 
-<!-- jQuery  -->
-<script src="plantilla/Admin/assets/js/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+     <!---FIN DE CONTENIDO-->
+    <!-- jQuery  -->
+    <script src="plantilla/Admin/vertical/assets/js/jquery.min.js"></script>
+    <script src="plantilla/Admin/vertical/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="plantilla/Admin/vertical/assets/js/metismenu.min.js"></script>
+    <script src="plantilla/Admin/vertical/assets/js/waves.js"></script>
+    <script src="plantilla/Admin/vertical/assets/js/simplebar.min.js"></script>
+
+    <!-- App js -->
+    <script src="plantilla/Admin/vertical/assets/js/theme.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery  -->
+    <script src="plantilla/Admin/assets/js/jquery.min.js"></script>
     <script src="plantilla/Admin/assets/js/bootstrap.bundle.min.js"></script>
     <script src="plantilla/Admin/assets/js/metismenu.min.js"></script>
     <script src="plantilla/Admin/assets/js/waves.js"></script>
@@ -445,7 +313,6 @@ echo"</tr>";
     
     <!-- App js -->
     <script src="plantilla/Admin/vertical/assets/js/theme.js"></script>
-
 
 </body>
 
