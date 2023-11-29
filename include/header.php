@@ -74,8 +74,9 @@
     <ul class="metismenu list-unstyled" id="side-menu">
     <li class="menu-title">MENU</li>
                     <li>
-                        <a href="" class="waves-effect"><i class="feather-home"></i>Inicio</a>
+                        <a href="portada.php" class="waves-effect"><i class="feather-home"></i>Inicio</a>
                     </li>
+
                     <li>
                         <a href="ventas.php" class="waves-effect"><i class="feather-shopping-bag"></i>Ventas</a>
                     </li>
