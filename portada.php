@@ -139,7 +139,7 @@
                         <div class="card-body">
 
                         <div class=" ">
-                    <img  src="portadas.jpg" class="img-fluid" alt="Responsive image">
+                    <img  src="port.jpg" class="img-fluid" alt="Responsive image">
 
                      </div>
 
