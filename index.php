@@ -177,7 +177,7 @@ require('conexion.php');
   </thead>
   <tbody>
   <?php
-$consulta="select *from usuario ";
+$consulta="SELECT u.id,u.dni,u.apellidos_nombres,u.correo,u.telefono,u.direccion,r.nombre,u.foto FROM usuario u INNER JOIN roles r ON u.id_rol=r.id;";
 $rol="select *from rol where id=nombre ";
 $ejecutar=mysqli_query($conn,$consulta);
 $cont=0;
@@ -193,7 +193,7 @@ echo"<td>".$respuesta['apellidos_nombres']."</td>";
 echo"<td>".$respuesta['correo']."</td>";
 echo"<td>".$respuesta['telefono']."</td>";
 echo"<td>".$respuesta['direccion']."</td>";
-echo"<td>".$respuesta['id_rol']."</td>";
+echo"<td>".$respuesta['nombre']."</td>";
 echo"<td>".$respuesta['foto']."</td>";
 
 echo"<td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";

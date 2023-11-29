@@ -102,7 +102,7 @@
   </thead>
   <tbody>
   <?php
-$consulta="select *from pedidos";
+$consulta="SELECT pe.id,cli.razon_social,fecha_hora_pedido,pe.fecha_entrega,pe.metodo_pago,pe.monto,pe.comprobante,pe.estado FROM pedidos pe INNER JOIN cliente cli ON pe.id_cliente=cli.id;";
 $ejecutar=mysqli_query($conn,$consulta);
 $cont=0;
 
@@ -112,7 +112,7 @@ while($respuesta=mysqli_fetch_array($ejecutar)){
 echo"<tr>";
 echo"<td>".$cont."</td>";
 echo"<td>".$respuesta['id']."</td>";
-echo"<td>".$respuesta['id_cliente']."</td>";
+echo"<td>".$respuesta['razon_social']."</td>";/* id_cliente*/ 
 echo"<td>".$respuesta['fecha_hora_pedido']."</td>";
 echo"<td>".$respuesta['fecha_entrega']."</td>";
 echo"<td>".$respuesta['metodo_pago']."</td>";

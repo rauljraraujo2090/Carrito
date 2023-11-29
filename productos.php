@@ -183,7 +183,7 @@ require('conexion.php');
   </thead>
   <tbody>
   <?php
-$consulta="select *from producto ";
+$consulta="SELECT p.id,p.codigo,p.descripcion,p.detalle,c.nombre,p.precio_compra,p.precio_venta,p.stock,p.estado,p.imagen,pro.razon_social FROM producto p INNER JOIN categoria c ON p.id_categoria=c.id INNER JOIN proveedor pro ON p.id_proveedor=pro.id; ";
 
 $ejecutar=mysqli_query($conn,$consulta);
 $cont=0;
@@ -197,13 +197,13 @@ echo"<td>".$respuesta['id']."</td>";
 echo"<td>".$respuesta['codigo']."</td>";
 echo"<td>".$respuesta['descripcion']."</td>";
 echo"<td>".$respuesta['detalle']."</td>";
-echo"<td>".$respuesta['id_categoria']."</td>";
+echo"<td>".$respuesta['nombre']."</td>"; /* id_categoria*/ 
 echo"<td>".$respuesta['precio_compra']."</td>";
 echo"<td>".$respuesta['precio_venta']."</td>";
 echo"<td>".$respuesta['stock']."</td>";
 echo"<td>".$respuesta['estado']."</td>";
 echo"<td>".$respuesta['imagen']."</td>";
-echo"<td>".$respuesta['id_proveedor']."</td>";
+echo"<td>".$respuesta['razon_social']."</td>";/* id_proveedor*/ 
 
 
 echo"<td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";
