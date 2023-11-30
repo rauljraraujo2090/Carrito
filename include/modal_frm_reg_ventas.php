@@ -1,138 +1,62 @@
- 
- 
- 
- 
- <!-- Large modal -->
- <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".registrar_ventas">+Nuevo</button>
+<button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".registrar">+ Nuevo</button>
 
-<div class="modal fade registrar_ventas" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title h4" id="myLargeModalLabel">Registrar Ventas</h5>
-                                                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-
-
-                                                <form action="registrar_ventas.php" method="POST" >
-                          
-
-                        <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Serie venta</label>
-                            <input type="number"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="serie" placeholder=" "required>
-
+                <div class="modal fade registrar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title h4" id="myLargeModalLabel">Nuevo venta</h5>
+                                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-
-
-                                  <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Numero venta</label>
-                            <input type="number"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="n_venta"required>
-
-                            </div>
-
-
-                                  <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">fecha_hora_venta</label>
-                            <input type="date"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="f_venta"placeholder="  "required>
-
-                            </div>
-
-
-
-                            <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Monto total</label>
-                            <input type="number"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="monto"placeholder=" "required>
-
-                            </div>
-
-
-
-
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Cliente</label>
-                                
-                             <select name="cliente" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
-                           <optio value=""></optio>
-                             <?php
-                             $consulta_cliente="SELECT*FROM cliente";
-                             $ejecutar= mysqli_query($conn, $consulta_cliente);
-                             while($datos_cliente=mysqli_fetch_array($ejecutar)){?>
-                            
-
-
-                              <option value="<?php echo  $datos_cliente['id'];?>"><?php  echo $datos_cliente['razon_social'];?></option>
-                          
-                             
-                             
-                            
-                             <?php }?>
-                            
-                             </select>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Usuario</label>
-                                
-                             <select name="usuario" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
-                           <optio value=""></optio>
-                             <?php
-                             $consulta_usu="SELECT*FROM usuario";
-                             $ejecutar= mysqli_query($conn, $consulta_usu);
-                             while($datos_usu=mysqli_fetch_array($ejecutar)){?>
-                            
-
-
-                              <option value="<?php echo  $datos_usu['id'];?>"><?php  echo $datos_usu['apellidos_nombres'];?></option>
-                          
-                             
-                             
-                            
-                             <?php }?>
-                            
-                             </select>
-                            </div>
-
-
-
-
-
-                    
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
-                                <button type="submit" class="btn btn-primary ">Registrar</button>
-
-                            </div>
-
-                      
-                      
-
-
-                        </form>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="modal-body">
+                                <form action="registrar_ventas.php" method="POST">
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" > Serie de Venta: </label>
+                                        <input type="number" name="serie_v" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                     </div>
-
-
-                                    
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" > Numero de Venta: </label>
+                                        <input type="number" name="num_venta" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    </div>                                   
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >Fecha hora de venta:</label>
+                                        <input type="date" name="fecha_h_ven" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >Monto total:</label>
+                                        <input type="number" name="monto_to" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    </div> 
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >id_cliente:</label>
+                                        <select name="id_cliente" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
+                                        <option></option>
+                                            <?php
+                                            $b_cliente = "SELECT * FROM cliente";
+                                            $r_b_roles = mysqli_query($conn, $b_cliente);
+                                            while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
+                                                <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['razon_social'];?></option>
+                                            <?php }?>                                         
+                                        </select>
+                                    </div>  
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >id_usuario:</label>
+                                        <select name="id_usuario" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
+                                        <option></option>
+                                            <?php
+                                            $b_roles = "SELECT * FROM usuario";
+                                            $r_b_roles = mysqli_query($conn, $b_roles);
+                                            while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
+                                                <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['apellidos_nombres'];?></option>
+                                            <?php }?>                                         
+                                        </select>
+                                    </div>  
+                                    <div class="form-group row">
+                                    <label class="col-lg-2 col-md-2 col-sm-12"></label>
+                                        <button type="submit" class="btn btn-danger">Guardar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
