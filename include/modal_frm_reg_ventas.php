@@ -17,12 +17,12 @@
                                                 <div class="modal-body">
 
 
-                                                <form action="registrar_ventas.php" method="post" >
+                                                <form action="registrar_ventas.php" method="POST" >
                           
 
                         <div class="form-group row">
                             <label class="col-lg-2 col-md-2 col-sm-12" for="">Serie venta</label>
-                            <input type="number"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="serie"placeholder=" "required>
+                            <input type="number"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="serie" placeholder=" "required>
 
                             </div>
 
@@ -57,7 +57,7 @@
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Cliente</label>
                                 
-                             <select name="id_cli" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
+                             <select name="cliente" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
                            <optio value=""></optio>
                              <?php
                              $consulta_cliente="SELECT*FROM cliente";
@@ -93,7 +93,7 @@
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Usuario</label>
                                 
-                             <select name="id_usu" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
+                             <select name="usuario" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
                            <optio value=""></optio>
                              <?php
                              $consulta_usu="SELECT*FROM usuario";

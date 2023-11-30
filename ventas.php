@@ -89,7 +89,7 @@
   <thead>
     <tr>
      <th scope="col">#</th>
-      <th scope="col">id</th>
+     
       <th scope="col">serie_venta</th>
       <th scope="col">Numero Venta</th>
       <th scope="col">Fecha_Hora_venta</th>
@@ -104,7 +104,7 @@
   </thead>
   <tbody>
   <?php
-$consulta="SELECT v.id,v.serie_venta,v.numero_venta,v.fecha_hora_venta,v.monto_total,cli.razon_social,u.apellidos_nombres FROM ventas v INNER JOIN cliente cli ON v.id_cliente=cli.id INNER JOIN usuario u ON v.id_usuario=u.id; ";
+$consulta="SELECT v.serie_venta,v.numero_venta,v.fecha_hora_venta,v.monto_total,cli.razon_social,u.apellidos_nombres FROM ventas v INNER JOIN cliente cli ON v.id_cliente=cli.id INNER JOIN usuario u ON v.id_usuario=u.id; ";
 $ejecutar=mysqli_query($conn,$consulta);
 $cont=0;
 
@@ -113,7 +113,7 @@ while($respuesta=mysqli_fetch_array($ejecutar)){
    
 echo"<tr>";
 echo"<td>".$cont."</td>";
-echo"<td>".$respuesta['id']."</td>";
+
 echo"<td>".$respuesta['serie_venta']."</td>";
 echo"<td>".$respuesta['numero_venta']."</td>";
 echo"<td>".$respuesta['fecha_hora_venta']."</td>";
