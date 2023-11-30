@@ -2,8 +2,8 @@
 include("conexion.php");
 //recibir la informacion
 
-$id_cliente=$_POST['id_cli'];
-$num_ven=$_POST['f_hora'];
+$id_cliente=$_POST['cli'];
+$f_hora=$_POST['f_hora'];
 $fecha_h=$_POST['fecha_e'];
 $m_p=$_POST['m_pago'];
 $monto=$_POST['monto'];
@@ -12,7 +12,7 @@ $estado=$_POST['estado'];
 
 
     $consulta="INSERT INTO pedidos(id_cliente,fecha_hora_pedido,fecha_entrega,metodo_pago,monto,comprobante,estado)
-    VALUES ('$id_cliente','$num_ven','$fecha_h','$m_p','$monto','$comprobante','$estado')";
+    VALUES ('$id_cliente','$f_hora','$fecha_h','$m_p','$monto','$comprobante','$estado')";
 
 $ejecutar= mysqli_query($conn, $consulta);
 

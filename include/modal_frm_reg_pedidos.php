@@ -1,7 +1,4 @@
- <?php
 
-include('../conexion');
-?>
  
  
  
@@ -22,7 +19,7 @@ include('../conexion');
                                                 <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Cliente</label>
                                 
-                             <select name="rol" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
+                             <select name="cli" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
                            <optio value=""></optio>
                              <?php
                              $consulta_rol="SELECT*FROM cliente";

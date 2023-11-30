@@ -13,7 +13,7 @@
                                 <form action="registrar_ventas.php" method="POST">
                                     <div class="form-group row">
                                         <label class="col-lg-2 col-md-2 col-sm-12" > Serie de Venta: </label>
-                                        <input type="number" name="serie_v" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                        <input type="number" name="serie_v" class="form-control col-lg-4 col-md-4 col-sm-12" placefolder="solo 5 digitos"required>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-lg-2 col-md-2 col-sm-12" > Numero de Venta: </label>
