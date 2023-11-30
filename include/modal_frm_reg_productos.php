@@ -114,7 +114,7 @@
                                
                                     <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                     <option>Seleccione Estock </option>
-                                    <option>1</option>
+                                    <option>activo</option>
                                      <option>0</option>
                                       
   

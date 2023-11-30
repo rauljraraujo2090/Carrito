@@ -17,7 +17,7 @@
                                                 <div class="modal-body">
 
 
-                                                <form action="registrar_ventas.php" method="post" enctype="multipart/form-data">
+                                                <form action="registrar_ventas.php" method="post" >
                           
 
                         <div class="form-group row">
@@ -57,7 +57,7 @@
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Cliente</label>
                                 
-                             <select name="id_cli" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
+                             <select name="id_cli" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
                            <optio value=""></optio>
                              <?php
                              $consulta_cliente="SELECT*FROM cliente";
@@ -93,7 +93,7 @@
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Usuario</label>
                                 
-                             <select name="id_usu" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
+                             <select name="id_usu" class="form-control col-lg-4 col-md-4 col-sm-12" id="" >
                            <optio value=""></optio>
                              <?php
                              $consulta_usu="SELECT*FROM usuario";
