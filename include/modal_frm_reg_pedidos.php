@@ -1,4 +1,7 @@
- 
+ <?php
+
+include('../conexion');
+?>
  
  
  
@@ -15,70 +18,20 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                <form action="registrar_usuarios.php" method="post" enctype="multipart/form-data">
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">DNI:</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="Ingrese su Dni " required >
-
-                            </div>
-
-
-
-                            <div class="form-group row">
-                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Apellidos y Nombres</label>
-                            <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="a_n"placeholder="Ingrese su apellido y su nombre  "required>
-
-                            </div>
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Correo:</label>
-                                <input type="email"class="form-control col-lg-10 col-md-10 col-sm-12"  name="correo"placeholder="Ingrese su Correo"required>
-
-                            </div>
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Telefono :</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder="Ingrese su Telefono "required>
-
-                            </div>
-
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Direccion:</label>
-                                <input type="text"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="direccion"placeholder="Ingrese su Direccion"required>
-
-                            </div>
-
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Nacimiento:</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="nacimiento"placeholder="Ingrese su Fecha de Nacimiento "required>
-
-                            </div>
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Foto</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12" accept="image/*"  name="img"placeholder="Ingrese su Fecha de Nacimiento "required>
-
-                            </div>
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Rol</label>
+                                                <form action="registrar_pedidos.php" method="post" >
+                                                <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Id_Cliente</label>
                                 
                              <select name="rol" class="form-control col-lg-4 col-md-4 col-sm-12" id="" type="file">
                            <optio value=""></optio>
                              <?php
-                             $consulta_rol="SELECT*FROM roles";
+                             $consulta_rol="SELECT*FROM cliente";
                              $ejecutar= mysqli_query($conn, $consulta_rol);
                              while($datos_roles=mysqli_fetch_array($ejecutar)){?>
                             
 
 
-                              <option value="<?php echo  $datos_roles['id'];?>"><?php  echo $datos_roles['nombre'];?></option>
+                              <option value="<?php echo  $datos_roles['id'];?>"><?php  echo $datos_roles['razon_social'];?></option>
                           
                              
                              
@@ -90,88 +43,29 @@
 
 
 
-                            
+
+                            <div class="form-group row">
+                            <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha_hora_pedido</label>
+                            <input type="date"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="f_hora"required>
+
+                            </div>
 
                             <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
-                                <button type="submit" class="btn btn-primary ">Registrar</button>
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Entrega:</label>
+                                <input type="date"class="form-control col-lg-10 col-md-10 col-sm-12"  name="fecha_e"required>
 
                             </div>
 
-                      
-                      
 
-
-                        </form><form action="registrar_usuarios.php" method="post">
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Fecha de Entrega</label>
-                                <input type="date"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-
-                    <!---
-                              <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Metodo de Pago</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder="" required >
-
-                            </div>
---->
-
-
-
-
-
-                                  <div class="form-group row">
+                            <div class="form-group row">
                                 <label class="col-lg-2 col-md-2 col-sm-12">Metodo de Pago</label>
                                
-                                    <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    <option>-----Seleccione el Metodo ----- </option>
-                                    <option>Soluciones</option>
-                                     <option>Soluciones</option>
-                                      
-  
-                                      
-                                    </select>
-                                 </div>
-
-
-
-
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Monto</label>
-                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-
-
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Comprobante</label>
-                                <input type="file"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-
-                            <!----
-                            <div class="form-group row ">
-                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Estado</label>
-                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="dni" autocomplete="off"placeholder=" " required >
-
-                            </div>
-
-                                     --->
-
-
-                                     <div class="form-group row">
-                                <label class="col-lg-2 col-md-2 col-sm-12">Estado</label>
-                               
-                                    <select name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    <option>Seleccione Estado  </option>
+                                    <select name="m_pago" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>Seleccione Metodo  </option>
                                     <option>yape</option>
                                      <option>Plin</option>
                                      <option>Interbanck</option>
                                       
-                                      
   
                                       
                                     </select>
@@ -179,7 +73,42 @@
 
 
 
-                    
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">monto:</label>
+                                <input type="number"class="form-control ol-lg-10 col-md-10 col-sm-12"  name="monto"required>
+
+                            </div>
+
+
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Comprobante:</label>
+                                <input type="text"class="form-control col-lg-4 col-md-4 col-sm-12"  name="comprobante"required>
+
+                            </div>
+
+                             <div class="form-group row">
+                                <label class="col-lg-2 col-md-2 col-sm-12">Estado</label>
+                               
+                                    <select name="estado" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>Seleccione el estado </option>
+                                    <option>activo</option>
+                                     <option>otros</option>
+                                    
+                                      
+  
+                                      
+                                    </select>
+                                 </div>
+
+                            
+                         
+
+
+
+                            
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
@@ -192,6 +121,11 @@
 
 
                         </form>
+                        
+
+
+                        
+                        
                                                 </div>
                                             </div>
                                         </div>

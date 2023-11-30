@@ -1,7 +1,9 @@
  
  
  
- 
+ <?php
+include('../conexion.php');
+ ?>
  <!-- Large modal -->
  <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".registrar_usuario">+Nuevo</button>
 
