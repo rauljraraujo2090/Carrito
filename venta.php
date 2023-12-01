@@ -39,8 +39,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="col-10">
-                    <h4>Lista  de Ventas</h4>
+                    <h4>Registrar Nueva Venta </h4>
                     </div>
+                 
                     <div class="card">
                         <!---<div class="card-body">
 
@@ -49,6 +50,7 @@
                         
                     </div>
 
+                    <a href="ventas.php " class="btn btn-success">Lista de Ventas </a>
 
 
 
@@ -56,8 +58,6 @@
 
 
 
-
-                    <a href="venta.php " class="btn btn-success">+Nuevo</a>
                     <div class="card">
                         <div class="card-body">
 
@@ -82,63 +82,52 @@
                         <br>
                         <br>
        
-
-<table id="basic-datatable" class="table dt-responsive nowrap">
-  <thead>
-    <tr>
-     <th scope="col">#</th>
-      <th scope="col">id</th>
-      <th scope="col">serie_venta</th>
-      <th scope="col">Numero Venta</th>
-      <th scope="col">Fecha_Hora_venta</th>
-      <th scope="col">monto Total</th>
-      <th scope="col">id_cliente</th>
-      <th scope="col">id_usuario</th>
-    
-      <th scope="col">Accion</th>
-    </tr>
-  
-
-  </thead>
-  <tbody>
-  <?php
-$consulta="SELECT v.id,v.serie_venta,v.numero_venta,v.fecha_hora_venta,v.monto_total,cli.razon_social,u.apellidos_nombres FROM ventas v INNER JOIN cliente cli ON v.id_cliente=cli.id INNER JOIN usuario u ON v.id_usuario=u.id; ";
-$ejecutar=mysqli_query($conn,$consulta);
-$cont=0;
-
-while($respuesta=mysqli_fetch_array($ejecutar)){
-    $cont++;
-   
-echo"<tr>";
-echo"<td>".$cont."</td>";
-echo"<td>".$respuesta['id']."</td>";
-echo"<td>".$respuesta['serie_venta']."</td>";
-echo"<td>".$respuesta['numero_venta']."</td>";
-echo"<td>".$respuesta['fecha_hora_venta']."</td>";
-echo"<td>".$respuesta['monto_total']."</td>";
-echo"<td>".$respuesta['razon_social']."</td>";/* id_cliente*/ 
-echo"<td>".$respuesta['apellidos_nombres']."</td>";/* id_usuario*/ 
-
-
-echo"<td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";
-
-
-
-
-
-echo"</tr>";
-
-
-    
-
-}
-
-
-
-?>
-  </tbody>
-</table>
-<!-- table -->
+                        <form action="registrar_ventas.php" method="POST">
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" > Serie de Venta: </label>
+                                        <input type="number" name="serie_v" class="form-control col-lg-4 col-md-4 col-sm-12" placefolder="solo 5 digitos"required>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" > Numero de Venta: </label>
+                                        <input type="number" name="num_venta" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    </div>                                   
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >Fecha hora de venta:</label>
+                                        <input type="date" name="fecha_h_ven" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >Monto total:</label>
+                                        <input type="number" name="monto_to" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    </div> 
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >id_cliente:</label>
+                                        <select name="id_cliente" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
+                                        <option></option>
+                                            <?php
+                                            $b_cliente = "SELECT * FROM cliente";
+                                            $r_b_roles = mysqli_query($conn, $b_cliente);
+                                            while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
+                                                <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['razon_social'];?></option>
+                                            <?php }?>                                         
+                                        </select>
+                                    </div>  
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >id_usuario:</label>
+                                        <select name="id_usuario" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
+                                        <option></option>
+                                            <?php
+                                            $b_roles = "SELECT * FROM usuario";
+                                            $r_b_roles = mysqli_query($conn, $b_roles);
+                                            while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
+                                                <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['apellidos_nombres'];?></option>
+                                            <?php }?>                                         
+                                        </select>
+                                    </div>  
+                                    <div class="form-group row">
+                                    <label class="col-lg-2 col-md-2 col-sm-12"></label>
+                                        <button type="submit" class="btn btn-primary">Registrar</button>
+                                    </div>
+                                </form>
                         </div>
                         
                     </div>

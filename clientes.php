@@ -190,7 +190,7 @@ echo"<tr>";
 echo"<td>".$cont."</td>";
 echo"<td>".$respuesta['id']."</td>";
 echo"<td>".$respuesta['ruc_dni']."</td>";
-echo"<td>".$respuesta['razon Social']."</td>";
+echo"<td>".$respuesta['razon_social']."</td>";
 echo"<td>".$respuesta['telefono']."</td>";
 echo"<td>".$respuesta['correo']."</td>";
 echo"<td>".$respuesta['direccion']."</td>";

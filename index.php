@@ -20,12 +20,26 @@
     <link href="plantilla/Admin/plugins/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/plugins/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
     
-
+<!--Modal Alert--->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <link rel="shortcut icon" href="carrito.png">
 </head>
 
 <body>
+
+<script>
+
+
+
+Swal.fire({
+    position: "top-center",
+    icon: "success",
+    title: "Bienvenido al Carrito de Compras De Raul Jr",
+    showConfirmButton: false,
+    timer: 2500
+  });
+</script>
     <?php
     require('include/header.php');
     ?>
@@ -303,6 +317,11 @@ echo"</tr>";
     
     <!-- App js -->
     <script src="plantilla/Admin/vertical/assets/js/theme.js"></script>
+
+
+
+
+ 
 
 </body>
 

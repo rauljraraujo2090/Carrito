@@ -53,7 +53,7 @@
                                     </div>  
                                     <div class="form-group row">
                                     <label class="col-lg-2 col-md-2 col-sm-12"></label>
-                                        <button type="submit" class="btn btn-danger">Guardar</button>
+                                        <button type="submit" class="btn btn-primary">Registrar</button>
                                     </div>
                                 </form>
                             </div>
