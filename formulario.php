@@ -28,7 +28,9 @@
 
 <body>
 
+<script src="modal.js">
 
+</script>
     <?php
     require('include/header.php');
     ?>
