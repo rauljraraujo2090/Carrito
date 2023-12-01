@@ -1,11 +1,7 @@
-function mostra(){
-
-
-    Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Your work has been saved",
-        showConfirmButton: false,
-        timer: 1500
-      });
-}
+Swal.fire({
+    position: "top-center",
+    icon: "success",
+    title: "Bienvenido al Carrito de Compras De Raul Jr",
+    showConfirmButton: false,
+    timer: 2500
+  });
