@@ -77,6 +77,8 @@
                     </div>
 
                     <a href="ventas.php " class="btn btn-success">Lista de Ventas </a>
+                    <br>
+                    <br>
 
 
 
@@ -203,7 +205,7 @@
     <td><input  class="cantidad" type="number"value="1" ></td>
     <td class="valor">S/ 50.00</td>
     <td class="valor">S/ 100.00</td>
-    <td><button type="submit" class="btn btn-danger">X</button></td>
+    <td><button onclick="eliminar()"type="submit" class="btn btn-danger">X</button></td>
   </tr>
   <tr>
     <td  colspan="4" class=" text-center">TOTAL</td>
@@ -335,6 +337,13 @@
     
     <!-- App js -->
     <script src="plantilla/Admin/vertical/assets/js/theme.js"></script>
+
+<!----MODAL ALERT--->
+
+<script src="eliminar.js">
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
