@@ -23,6 +23,32 @@
 
     
     <link rel="shortcut icon" href="carrito.png">
+
+    <style>
+        .cantidad{
+            width:3em;
+
+
+        }
+.head{
+
+    background-color: #2ac14e;
+    color:white;
+}
+
+.total{
+    color:#2ac14e;
+
+
+}
+.valor{
+    color:#2ac14e;
+
+
+}
+
+
+    </style>
 </head>
 
 <body>
@@ -61,6 +87,136 @@
                     <div class="card">
                         <div class="card-body">
 
+
+
+
+                        <div class="row ">
+
+<!--FORMULARIO  VENTA-->
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+
+
+                            <form action="registrar_ventas.php" method="POST">
+                                    <div class="form-group row">
+                                        <label  class="col-lg-2 col-md-2 col-sm-12"for="">DNI:</label>
+                                            <input type="number" name="dni" class="form-control col-lg-4 col-md-4 col-sm-12" require placefolder="dni cliente "> 
+                                            <button class="btn btn-info col-lg-2 col-md-2 col-sm-4">Buscar</button>
+
+
+                                    </div>
+
+
+
+                                    <div class="form-group row">
+                                        <label  class="col-lg-2 col-md-2 col-sm-12"for="">Apellidos y Nombres:</label>
+                                            <input type="text" id="nombres" class="form-control col-lg-8 col-md-8 col-sm-12" readonly> 
+                                           
+
+                                    </div>
+
+
+                            
+
+
+
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-2 col-md-2 col-sm-12" >id_usuario:</label>
+                                        <select name="id_usuario" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
+                                        <option></option>
+                                            <?php
+                                            $b_roles = "SELECT * FROM usuario";
+                                            $r_b_roles = mysqli_query($conn, $b_roles);
+                                            while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
+                                                <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['apellidos_nombres'];?></option>
+                                            <?php }?>                                         
+                                        </select>
+                                    </div>  
+
+
+
+
+
+                                    <div class="form-group row">
+                                        <label  class="col-lg-2 col-md-2 col-sm-12"for="">producto:</label>
+                                            <input type="text" name="producto" class="form-control col-lg-4 col-md-4 col-sm-12" require placefolder="Codigo Producto "> 
+                                            <button class="btn btn-info col-lg-2 col-md-2 col-sm-4">Buscar Producto</button>
+
+
+                                    </div>
+
+
+
+
+                                    <div class="form-group row">
+                                        <label  class="col-lg-2 col-md-2 col-sm-12"for="">Fecha Hora</label>
+                                        <label  class="form-control col-lg-4 col-md-4 col-sm-12"for="">
+                                            
+                                        <?php date_default_timezone_set('America/Lima'); echo date('d-m-Y h:i:s ');?></label>
+                                          
+
+
+                                    </div>
+
+
+
+
+           
+                                </form>
+
+
+                            </div>
+
+
+
+
+<!--FORMULARIO DETALLE VENTA-->
+
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+
+
+                            <table id="basic-datatable" class="table  dt-responsive nowrap mb-0">
+  <thead>
+    <tr class="head">
+        <th colspan="6" class="text-center">Productos</th>
+    </tr>
+    <tr>
+      <th width="5%">#</th>
+      <th width="60%">Descripcion</th>
+      <th width="10%">Cantidad</th>
+      <th width="10%">P.Unitario</th>
+      <th width="10%">Importe</th>
+      <th width="5%">Acciones</th>
+      
+      
+    
+      
+    </tr>
+  
+
+  </thead>
+  <tbody>
+
+  <tr>
+    <td>1</td>
+    <td>nombre producto</td>
+    <td><input  class="cantidad" type="number"value="1" ></td>
+    <td class="valor">S/ 50.00</td>
+    <td class="valor">S/ 100.00</td>
+    <td><button type="submit" class="btn btn-danger">X</button></td>
+  </tr>
+  <tr>
+    <td  colspan="4" class=" text-center">TOTAL</td>
+    <td class="valor">S/ 100.00</td>
+  </tr>
+
+  
+  </tbody>
+</table>
+<!-- table -->
+
+                            </div>
+
                         
 
 
@@ -82,52 +238,18 @@
                         <br>
                         <br>
        
-                        <form action="registrar_ventas.php" method="POST">
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" > Serie de Venta: </label>
-                                        <input type="number" name="serie_v" class="form-control col-lg-4 col-md-4 col-sm-12" placefolder="solo 5 digitos"required>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" > Numero de Venta: </label>
-                                        <input type="number" name="num_venta" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    </div>                                   
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >Fecha hora de venta:</label>
-                                        <input type="date" name="fecha_h_ven" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >Monto total:</label>
-                                        <input type="number" name="monto_to" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    </div> 
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >id_cliente:</label>
-                                        <select name="id_cliente" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
-                                        <option></option>
-                                            <?php
-                                            $b_cliente = "SELECT * FROM cliente";
-                                            $r_b_roles = mysqli_query($conn, $b_cliente);
-                                            while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
-                                                <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['razon_social'];?></option>
-                                            <?php }?>                                         
-                                        </select>
-                                    </div>  
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >id_usuario:</label>
-                                        <select name="id_usuario" id="" class="form-control col-lg-4 col-md-4 col-sm-12">
-                                        <option></option>
-                                            <?php
-                                            $b_roles = "SELECT * FROM usuario";
-                                            $r_b_roles = mysqli_query($conn, $b_roles);
-                                            while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
-                                                <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['apellidos_nombres'];?></option>
-                                            <?php }?>                                         
-                                        </select>
-                                    </div>  
-                                    <div class="form-group row">
-                                    <label class="col-lg-2 col-md-2 col-sm-12"></label>
-                                        <button type="submit" class="btn btn-primary">Registrar</button>
-                                    </div>
-                                </form>
+                        
+
+                                </div>
+
+
+
+
+
+
+
+
+
                         </div>
                         
                     </div>
